@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2020-04-19 14:09:13.218521",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2020-04-19 14:09:25.968346",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "human-resource",
+ "owner": "Administrator",
+ "page_name": "Human Resource",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": ""
+}

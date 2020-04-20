@@ -1,0 +1,363 @@
+{
+ "creation": "2020-04-16 00:27:37.978539",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "employee",
+  "employee_name",
+  "department",
+  "designation",
+  "branch",
+  "column_break_7",
+  "status",
+  "payroll_entry",
+  "company",
+  "letter_head",
+  "section_break_12",
+  "salary_slip_based_on_timesheet",
+  "start_date",
+  "end_date",
+  "column_break_16",
+  "salary_structure",
+  "payroll_frequency",
+  "working_days",
+  "leave_without_pay",
+  "payment_days",
+  "section_break_22",
+  "salary_slip_timesheet",
+  "column_break_24",
+  "total_working_hours",
+  "hour_rate",
+  "section_break_27",
+  "bank_name",
+  "bank_account_no",
+  "section_break_30",
+  "deduct_tax_for_unclaimed_employee_benefits",
+  "deduct_tax_for_unsubmitted_tax_exemption_proof",
+  "earning_and_deduction_section",
+  "earnings",
+  "column_break_35",
+  "deductions",
+  "section_break_37",
+  "gross_pay",
+  "column_break_39",
+  "total_deduction",
+  "loan_repayment_section",
+  "employee_loan",
+  "section_break_43",
+  "total_principal_amount",
+  "total_interest_amount",
+  "column_break_46",
+  "total_loan_repayment",
+  "net_pay_info_section",
+  "net_pay",
+  "column_break_50",
+  "rounded_total",
+  "section_break_52",
+  "total_in_words",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Read Only",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nCancelled"
+  },
+  {
+   "fieldname": "payroll_entry",
+   "fieldtype": "Link",
+   "label": "Payroll Entry",
+   "options": "Payroll Entry"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_slip_based_on_timesheet",
+   "fieldtype": "Check",
+   "label": "Salary Slip Based on Timesheet"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_structure",
+   "fieldtype": "Link",
+   "label": "Salary Structure",
+   "options": "Salary Structure"
+  },
+  {
+   "fieldname": "payroll_frequency",
+   "fieldtype": "Select",
+   "label": "Payroll Frequency",
+   "options": "\nMonthly\nFortnightly\nBimonthly\nWeekly\nDaily"
+  },
+  {
+   "fieldname": "working_days",
+   "fieldtype": "Float",
+   "label": "Working Days"
+  },
+  {
+   "fieldname": "leave_without_pay",
+   "fieldtype": "Float",
+   "label": "Leave Without Pay"
+  },
+  {
+   "fieldname": "payment_days",
+   "fieldtype": "Float",
+   "label": "Payment Days"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "salary_slip_timesheet",
+   "fieldtype": "Table",
+   "label": "Salary Slip Timesheet",
+   "options": "Salary Slip Timesheet"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_working_hours",
+   "fieldtype": "Float",
+   "label": "Total Working Hours"
+  },
+  {
+   "fieldname": "hour_rate",
+   "fieldtype": "Currency",
+   "label": "Hour Rate"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_account_no",
+   "fieldtype": "Data",
+   "label": "Bank Account No"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "deduct_tax_for_unclaimed_employee_benefits",
+   "fieldtype": "Check",
+   "label": "Deduct Tax For Unclaimed Employee Benefits"
+  },
+  {
+   "default": "0",
+   "fieldname": "deduct_tax_for_unsubmitted_tax_exemption_proof",
+   "fieldtype": "Check",
+   "label": "Deduct Tax For Unsubmitted Tax Exemption Proof"
+  },
+  {
+   "fieldname": "earning_and_deduction_section",
+   "fieldtype": "Section Break",
+   "label": "Earning and Deduction"
+  },
+  {
+   "fieldname": "earnings",
+   "fieldtype": "Table",
+   "label": "Earnings",
+   "options": "Salary Detail"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "Salary Detail"
+  },
+  {
+   "fieldname": "section_break_37",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gross_pay",
+   "fieldtype": "Currency",
+   "label": "Gross Pay"
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_deduction",
+   "fieldtype": "Currency",
+   "label": "Total Deduction"
+  },
+  {
+   "fieldname": "loan_repayment_section",
+   "fieldtype": "Section Break",
+   "label": "Loan repayment"
+  },
+  {
+   "fieldname": "employee_loan",
+   "fieldtype": "Table",
+   "label": "Employee Loan",
+   "options": "Salary Slip Loan"
+  },
+  {
+   "fieldname": "section_break_43",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_principal_amount",
+   "fieldtype": "Currency",
+   "label": "Total Principal Amount"
+  },
+  {
+   "fieldname": "total_interest_amount",
+   "fieldtype": "Currency",
+   "label": "Total Interest Amount"
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_loan_repayment",
+   "fieldtype": "Currency",
+   "label": "Total Loan Repayment"
+  },
+  {
+   "fieldname": "net_pay_info_section",
+   "fieldtype": "Section Break",
+   "label": "net pay info"
+  },
+  {
+   "fieldname": "net_pay",
+   "fieldtype": "Currency",
+   "label": "Net Pay"
+  },
+  {
+   "fieldname": "column_break_50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rounded_total",
+   "fieldtype": "Currency",
+   "label": "Rounded Total"
+  },
+  {
+   "fieldname": "section_break_52",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_in_words",
+   "fieldtype": "Data",
+   "label": "Total in words"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Salary Slip",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-04-16 00:27:37.978539",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Salary Slip",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

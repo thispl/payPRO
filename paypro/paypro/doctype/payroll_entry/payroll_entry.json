@@ -1,0 +1,185 @@
+{
+ "autoname": "HR-PRUN-.YYYY.-.#####",
+ "creation": "2020-04-15 22:14:32.423157",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "select_employees_section",
+  "posting_date",
+  "payroll_frequency",
+  "column_break_4",
+  "company",
+  "employees_section",
+  "branch",
+  "department",
+  "column_break_9",
+  "designation",
+  "number_of_employees",
+  "section_break_12",
+  "employee_details",
+  "section_break_14",
+  "validate_attendance",
+  "section_break_16",
+  "salary_slip_based_on_timesheet",
+  "select_payroll_period_section",
+  "start_date",
+  "end_date",
+  "column_break_21",
+  "deduct_tax_for_unclaimed_employee_benefits",
+  "deduct_tax_for_unsubmitted_tax_exemption_proof",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "select_employees_section",
+   "fieldtype": "Section Break",
+   "label": "Select Employees"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "payroll_frequency",
+   "fieldtype": "Select",
+   "label": "Payroll Frequency",
+   "options": "\nMonthly\nFortnightly\nBimonthly\nWeekly\nDaily"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "employees_section",
+   "fieldtype": "Section Break",
+   "label": "Employees"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "number_of_employees",
+   "fieldtype": "Int",
+   "label": "Number Of Employees"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_details",
+   "fieldtype": "Table",
+   "label": "Employee Details",
+   "options": "Payroll Employee Detail"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "validate_attendance",
+   "fieldtype": "Check",
+   "label": "Validate Attendance"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_slip_based_on_timesheet",
+   "fieldtype": "Check",
+   "label": "Salary Slip Based on Timesheet"
+  },
+  {
+   "fieldname": "select_payroll_period_section",
+   "fieldtype": "Section Break",
+   "label": "Select Payroll Period"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "deduct_tax_for_unclaimed_employee_benefits",
+   "fieldtype": "Check",
+   "label": "Deduct Tax For Unclaimed Employee Benefits"
+  },
+  {
+   "default": "0",
+   "fieldname": "deduct_tax_for_unsubmitted_tax_exemption_proof",
+   "fieldtype": "Check",
+   "label": "Deduct Tax For Unsubmitted Tax Exemption Proof"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payroll Entry",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-04-15 22:14:32.423157",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Payroll Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

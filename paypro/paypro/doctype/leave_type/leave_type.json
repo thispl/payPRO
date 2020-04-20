@@ -1,0 +1,104 @@
+{
+ "autoname": "field:leave_type_name",
+ "creation": "2020-04-03 21:07:56.648429",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "leave_type_name",
+  "max_leaves_allowed",
+  "applicable_after",
+  "maximum_continuous_days_applicable",
+  "column_break_5",
+  "is_carry_forward",
+  "is_leave_without_pay",
+  "is_optional_leave",
+  "allow_negative",
+  "include_holidays",
+  "is_compensatory"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave_type_name",
+   "fieldtype": "Data",
+   "label": "Leave Type Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "max_leaves_allowed",
+   "fieldtype": "Int",
+   "label": "Max Leaves Allowed"
+  },
+  {
+   "fieldname": "applicable_after",
+   "fieldtype": "Int",
+   "label": "Applicable After"
+  },
+  {
+   "fieldname": "maximum_continuous_days_applicable",
+   "fieldtype": "Int",
+   "label": "Maximum Continuous Days Applicable"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_carry_forward",
+   "fieldtype": "Check",
+   "label": "Is Carry Forward"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_leave_without_pay",
+   "fieldtype": "Check",
+   "label": "Is Leave Without Pay"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_optional_leave",
+   "fieldtype": "Check",
+   "label": "Is Optional Leave"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_negative",
+   "fieldtype": "Check",
+   "label": "Allow Negative"
+  },
+  {
+   "default": "0",
+   "fieldname": "include_holidays",
+   "fieldtype": "Check",
+   "label": "Include holidays"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_compensatory",
+   "fieldtype": "Check",
+   "label": "Is Compensatory"
+  }
+ ],
+ "modified": "2020-04-03 21:07:56.648429",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Leave Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

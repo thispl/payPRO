@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include paypro *.css
+recursive-include paypro *.csv
+recursive-include paypro *.html
+recursive-include paypro *.ico
+recursive-include paypro *.js
+recursive-include paypro *.json
+recursive-include paypro *.md
+recursive-include paypro *.png
+recursive-include paypro *.py
+recursive-include paypro *.svg
+recursive-include paypro *.txt
+recursive-exclude paypro *.pyc

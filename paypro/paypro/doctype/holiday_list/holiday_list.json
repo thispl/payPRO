@@ -1,0 +1,100 @@
+{
+ "autoname": "field:holiday_list_name",
+ "creation": "2020-04-03 22:14:29.197653",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "holiday_list_name",
+  "from_date",
+  "to_date",
+  "column_break_4",
+  "total_holidays",
+  "add_weekly_holidays",
+  "weekly_off",
+  "add_to_holidays",
+  "holidays_section",
+  "holidays",
+  "clear_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "holiday_list_name",
+   "fieldtype": "Data",
+   "label": "Holiday List Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_holidays",
+   "fieldtype": "Int",
+   "label": "Total Holidays"
+  },
+  {
+   "fieldname": "add_weekly_holidays",
+   "fieldtype": "Data",
+   "label": "Add Weekly Holidays"
+  },
+  {
+   "fieldname": "weekly_off",
+   "fieldtype": "Select",
+   "label": "Weekly Off",
+   "options": "\nSunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+  },
+  {
+   "fieldname": "add_to_holidays",
+   "fieldtype": "Button",
+   "label": "Add to Holidays"
+  },
+  {
+   "fieldname": "holidays_section",
+   "fieldtype": "Section Break",
+   "label": "Holidays"
+  },
+  {
+   "fieldname": "holidays",
+   "fieldtype": "Link",
+   "label": "Holidays",
+   "options": "Holiday"
+  },
+  {
+   "fieldname": "clear_table",
+   "fieldtype": "Button",
+   "label": "Clear Table"
+  }
+ ],
+ "modified": "2020-04-03 22:14:29.197653",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Holiday List",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

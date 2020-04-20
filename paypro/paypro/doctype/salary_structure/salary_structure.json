@@ -1,0 +1,182 @@
+{
+ "autoname": "Prompt",
+ "creation": "2020-04-15 22:27:46.046759",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "letter_head",
+  "column_break_3",
+  "is_active",
+  "payroll_frequency",
+  "is_default",
+  "section_break_7",
+  "salary_slip_based_on_timesheet",
+  "column_break_9",
+  "salary_component",
+  "hour_rate",
+  "leave_encashment_amount_per_day",
+  "max_benefits",
+  "earning_section",
+  "earnings",
+  "deduction_section",
+  "deductions",
+  "section_break_18",
+  "total_earning",
+  "column_break_20",
+  "total_deduction",
+  "net_pay",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Select",
+   "label": "Is Active",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "payroll_frequency",
+   "fieldtype": "Select",
+   "label": "Payroll Frequency",
+   "options": "\nMonthly\nFortnightly\nBimonthly\nWeekly\nDaily"
+  },
+  {
+   "fieldname": "is_default",
+   "fieldtype": "Select",
+   "label": "Is Default",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_slip_based_on_timesheet",
+   "fieldtype": "Check",
+   "label": "Salary Slip Based on Timesheet"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "label": "Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "hour_rate",
+   "fieldtype": "Currency",
+   "label": "Hour Rate"
+  },
+  {
+   "fieldname": "leave_encashment_amount_per_day",
+   "fieldtype": "Currency",
+   "label": "Leave Encashment Amount Per Day"
+  },
+  {
+   "fieldname": "max_benefits",
+   "fieldtype": "Currency",
+   "label": "Max Benefits"
+  },
+  {
+   "fieldname": "earning_section",
+   "fieldtype": "Section Break",
+   "label": "Earning"
+  },
+  {
+   "fieldname": "earnings",
+   "fieldtype": "Table",
+   "label": "Earnings",
+   "options": "Salary Detail"
+  },
+  {
+   "fieldname": "deduction_section",
+   "fieldtype": "Section Break",
+   "label": "Deduction"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "Salary Detail"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_earning",
+   "fieldtype": "Currency",
+   "label": "Total Earning",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_deduction",
+   "fieldtype": "Currency",
+   "label": "Total Deduction",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "net_pay",
+   "fieldtype": "Currency",
+   "label": "Net Pay",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Salary Structure",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-04-15 22:27:46.046759",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Salary Structure",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

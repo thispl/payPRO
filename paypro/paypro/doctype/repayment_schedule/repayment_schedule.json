@@ -1,0 +1,67 @@
+{
+ "creation": "2020-04-13 19:55:56.474310",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_date",
+  "principal_amount",
+  "interest_amount",
+  "total_payment",
+  "balance_loan_amount",
+  "paid"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "principal_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Principal Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "interest_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Interest Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "total_payment",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Payment",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "balance_loan_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Balance Loan Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "Paid"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-17 20:29:35.166797",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Repayment Schedule",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
