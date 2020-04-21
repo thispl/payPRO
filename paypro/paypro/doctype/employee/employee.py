@@ -47,8 +47,8 @@ class Employee(NestedSet):
 		self.validate_status()
 		self.validate_reports_to()
 		self.validate_preferred_email()
-		# if self.job_applicant:
-			# self.validate_onboarding_process()
+		if self.job_applicant:
+			self.validate_onboarding_process()
 
 		if self.user_id:
 			self.validate_user_details()
@@ -358,12 +358,12 @@ def is_holiday(employee, date=None, raise_exception=True):
 	if holiday_list:
 		return frappe.get_all('Holiday List', dict(name=holiday_list, holiday_date=date)) and True or False
 
-@frappe.whitelist()
-def deactivate_sales_person(status = None, employee = None):
-	if status == "Left":
-		sales_person = frappe.db.get_value("Sales Person", {"Employee": employee})
-		if sales_person:
-			frappe.db.set_value("Sales Person", sales_person, "enabled", 0)
+# @frappe.whitelist()
+# def deactivate_sales_person(status = None, employee = None):
+# 	if status == "Left":
+# 		sales_person = frappe.db.get_value("Sales Person", {"Employee": employee})
+# 		if sales_person:
+# 			frappe.db.set_value("Sales Person", sales_person, "enabled", 0)
 
 @frappe.whitelist()
 def create_user(employee, user = None, email=None):

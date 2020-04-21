@@ -13,13 +13,13 @@ frappe.ui.form.on("Salary Slip", {
 			];
 		});
 
-		frm.fields_dict["timesheets"].grid.get_field("time_sheet").get_query = function(){
-			return {
-				filters: {
-					employee: frm.doc.employee
-				}
-			}
-		};
+		// frm.fields_dict["timesheets"].grid.get_field("time_sheet").get_query = function(){
+		// 	return {
+		// 		filters: {
+		// 			employee: frm.doc.employee
+		// 		}
+		// 	}
+		// };
 
 		frm.set_query("salary_component", "earnings", function() {
 			return {
@@ -37,11 +37,11 @@ frappe.ui.form.on("Salary Slip", {
 			}
 		});
 
-		frm.set_query("employee", function() {
-			return{
-				query: "erpnext.controllers.queries.employee_query"
-			}
-		});
+		// frm.set_query("employee", function() {
+		// 	return{
+		// 		query: "erpnext.controllers.queries.employee_query"
+		// 	}
+		// });
 	},
 
 	start_date: function(frm){

@@ -70,7 +70,8 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "label": "Naming Series"
+   "label": "Naming Series",
+   "options": "HR-EMP-"
   },
   {
    "fieldname": "first_name",
@@ -352,7 +353,7 @@
    "options": "Shift Type"
   }
  ],
- "modified": "2020-04-17 19:55:43.900256",
+ "modified": "2020-04-20 19:45:25.934396",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee",
