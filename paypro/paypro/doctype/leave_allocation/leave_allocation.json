@@ -1,5 +1,5 @@
 {
- "autoname": "naming _series:",
+ "autoname": "naming_series:",
  "creation": "2020-04-03 22:04:18.422698",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -30,17 +30,22 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
   {
    "fieldname": "employee_name",
    "fieldtype": "Data",
-   "label": "Employee Name"
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
   },
   {
    "fieldname": "deaprtment",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Deaprtment",
    "options": "Department"
   },
@@ -51,6 +56,8 @@
   {
    "fieldname": "leave_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Leave Type",
    "options": "Leave Type"
   },
@@ -88,6 +95,7 @@
   {
    "fieldname": "total_leaves_allocated",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "label": "Total Leaves Allocated"
   },
   {
@@ -101,7 +109,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-03 22:04:18.422698",
+ "modified": "2020-04-22 16:32:32.163556",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Allocation",

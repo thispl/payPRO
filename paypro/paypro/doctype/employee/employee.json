@@ -8,8 +8,9 @@
   "basic_information_section",
   "naming_series",
   "first_name",
+  "middle_name",
   "last_name",
-  "full_name",
+  "employee_name",
   "column_break_6",
   "company",
   "status",
@@ -59,7 +60,9 @@
   "exit_section",
   "resignation_letter_date",
   "relieving_date",
-  "reason_for_leaving"
+  "column_break_56",
+  "reason_for_leaving",
+  "date_of_retirement"
  ],
  "fields": [
   {
@@ -82,11 +85,6 @@
    "fieldname": "last_name",
    "fieldtype": "Data",
    "label": "Last Name"
-  },
-  {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "label": "Full Name"
   },
   {
    "fieldname": "column_break_6",
@@ -144,12 +142,16 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
   {
    "fieldname": "designation",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Designation",
    "options": "Designation"
   },
@@ -166,6 +168,8 @@
   {
    "fieldname": "branch",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Branch",
    "options": "Branch"
   },
@@ -245,7 +249,8 @@
    "fieldname": "prefered_email",
    "fieldtype": "Data",
    "label": "Prefered Email",
-   "options": "Email"
+   "options": "Email",
+   "read_only": 1
   },
   {
    "fieldname": "company_email",
@@ -351,9 +356,31 @@
    "fieldtype": "Link",
    "label": "Default Shift",
    "options": "Shift Type"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "date_of_retirement",
+   "fieldtype": "Date",
+   "label": "Date Of Retirement"
+  },
+  {
+   "fieldname": "column_break_56",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
- "modified": "2020-04-20 19:45:25.934396",
+ "modified": "2020-04-22 16:31:08.857874",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee",

@@ -3,8 +3,10 @@
 
 frappe.ui.form.on("Timesheet", {
 	setup: function(frm) {
-		frappe.require("/assets/erpnext/js/projects/timer.js");
+		// frappe.require("/assets/erpnext/js/projects/timer.js");
 		frm.add_fetch('employee', 'employee_name', 'employee_name');
+		frm.add_fetch('employee', 'department', 'department');
+		frm.add_fetch('employee', 'designation', 'designation');
 		frm.fields_dict.employee.get_query = function() {
 			return {
 				filters:{
@@ -13,23 +15,23 @@ frappe.ui.form.on("Timesheet", {
 			};
 		};
 
-		frm.fields_dict['time_logs'].grid.get_field('task').get_query = function(frm, cdt, cdn) {
-			var child = locals[cdt][cdn];
-			return{
-				filters: {
-					'project': child.project,
-					'status': ["!=", "Cancelled"]
-				}
-			};
-		};
+		// frm.fields_dict['time_logs'].grid.get_field('task').get_query = function(frm, cdt, cdn) {
+		// 	var child = locals[cdt][cdn];
+		// 	return{
+		// 		filters: {
+		// 			'project': child.project,
+		// 			'status': ["!=", "Cancelled"]
+		// 		}
+		// 	};
+		// };
 
-		frm.fields_dict['time_logs'].grid.get_field('project').get_query = function() {
-			return{
-				filters: {
-					'company': frm.doc.company
-				}
-			};
-		};
+		// frm.fields_dict['time_logs'].grid.get_field('project').get_query = function() {
+		// 	return{
+		// 		filters: {
+		// 			'company': frm.doc.company
+		// 		}
+		// 	};
+		// };
 	},
 
 	onload: function(frm){
@@ -43,17 +45,17 @@ frappe.ui.form.on("Timesheet", {
 	},
 
 	refresh: function(frm) {
-		if(frm.doc.docstatus==1) {
+		// if(frm.doc.docstatus==1) {
 			// if(frm.doc.per_billed < 100 && frm.doc.total_billable_hours && frm.doc.total_billable_hours > frm.doc.total_billed_hours){
 			// 	frm.add_custom_button(__('Create Sales Invoice'), function() { frm.trigger("make_invoice") },
 			// 		"fa fa-file-text");
 			// }
 
-			if(!frm.doc.salary_slip && frm.doc.employee){
-				frm.add_custom_button(__('Create Salary Slip'), function() { frm.trigger("make_salary_slip") },
-					"fa fa-file-text");
-			}
-		}
+		// 	if(!frm.doc.salary_slip && frm.doc.employee){
+		// 		frm.add_custom_button(__('Create Salary Slip'), function() { frm.trigger("make_salary_slip") },
+		// 			"fa fa-file-text");
+		// 	}
+		// }
 
 		if (frm.doc.docstatus < 1) {
 
@@ -101,38 +103,38 @@ frappe.ui.form.on("Timesheet", {
 			});
 	},
 
-	make_invoice: function(frm) {
-		let dialog = new frappe.ui.Dialog({
-			title: __("Select Item (optional)"),
-			fields: [
-				{"fieldtype": "Link", "label": __("Item Code"), "fieldname": "item_code", "options":"Item"},
-				{"fieldtype": "Link", "label": __("Customer"), "fieldname": "customer", "options":"Customer"}
-			]
-		});
+	// make_invoice: function(frm) {
+	// 	let dialog = new frappe.ui.Dialog({
+	// 		title: __("Select Item (optional)"),
+	// 		fields: [
+	// 			{"fieldtype": "Link", "label": __("Item Code"), "fieldname": "item_code", "options":"Item"},
+	// 			{"fieldtype": "Link", "label": __("Customer"), "fieldname": "customer", "options":"Customer"}
+	// 		]
+		// });
 
-		dialog.set_primary_action(__('Create Sales Invoice'), () => {
-			var args = dialog.get_values();
-			if(!args) return;
-			dialog.hide();
-			return frappe.call({
-				type: "GET",
-				method: "paypro.paypro.doctype.timesheet.timesheet.make_sales_invoice",
-				args: {
-					"source_name": frm.doc.name,
-					"item_code": args.item_code,
-					"customer": args.customer
-				},
-				freeze: true,
-				callback: function(r) {
-					if(!r.exc) {
-						frappe.model.sync(r.message);
-						frappe.set_route("Form", r.message.doctype, r.message.name);
-					}
-				}
-			});
-		});
-		dialog.show();
-	},
+	// 	dialog.set_primary_action(__('Create Sales Invoice'), () => {
+	// 		var args = dialog.get_values();
+	// 		if(!args) return;
+	// 		dialog.hide();
+	// 		return frappe.call({
+	// 			type: "GET",
+	// 			method: "paypro.paypro.doctype.timesheet.timesheet.make_sales_invoice",
+	// 			args: {
+	// 				"source_name": frm.doc.name,
+	// 				"item_code": args.item_code,
+	// 				"customer": args.customer
+	// 			},
+	// 			freeze: true,
+	// 			callback: function(r) {
+	// 				if(!r.exc) {
+	// 					frappe.model.sync(r.message);
+	// 					frappe.set_route("Form", r.message.doctype, r.message.name);
+	// 				}
+	// 			}
+	// 		});
+	// 	});
+	// 	dialog.show();
+	// },
 
 	make_salary_slip: function(frm) {
 		frappe.model.open_mapped_doc({
@@ -147,14 +149,14 @@ frappe.ui.form.on("Timesheet Detail", {
 		calculate_time_and_amount(frm);
 	},
 
-	task: (frm, cdt, cdn) => {
-		let row = frm.selected_doc;
-		if (row.task) {
-			frappe.db.get_value("Task", row.task, "project", (r) => {
-				frappe.model.set_value(cdt, cdn, "project", r.project);
-			});
-		}
-	},
+	// task: (frm, cdt, cdn) => {
+	// 	let row = frm.selected_doc;
+	// 	if (row.task) {
+	// 		frappe.db.get_value("Task", row.task, "project", (r) => {
+	// 			frappe.model.set_value(cdt, cdn, "project", r.project);
+	// 		});
+	// 	}
+	// },
 
 	from_time: function(frm, cdt, cdn) {
 		calculate_end_time(frm, cdt, cdn);

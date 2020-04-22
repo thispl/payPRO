@@ -36,17 +36,22 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
   {
    "fieldname": "employee_name",
    "fieldtype": "Read Only",
+   "in_list_view": 1,
    "label": "Employee Name"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "\nPresent\nAbsent\nOn Leave\nHalf Day"
   },
@@ -78,6 +83,8 @@
   {
    "fieldname": "attendance_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Attendance Date"
   },
   {
@@ -89,6 +96,8 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -112,7 +121,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-17 19:47:20.260487",
+ "modified": "2020-04-22 16:34:04.892913",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Attendance",

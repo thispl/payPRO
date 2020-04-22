@@ -1,4 +1,5 @@
 {
+ "autoname": "field:department_name",
  "creation": "2020-04-03 11:11:22.637187",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -11,7 +12,8 @@
   {
    "fieldname": "department_name",
    "fieldtype": "Data",
-   "label": "Department Name"
+   "label": "Department Name",
+   "unique": 1
   },
   {
    "fieldname": "company",
@@ -20,7 +22,7 @@
    "options": "Company"
   }
  ],
- "modified": "2020-04-03 11:11:22.637187",
+ "modified": "2020-04-22 16:00:17.154741",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Department",

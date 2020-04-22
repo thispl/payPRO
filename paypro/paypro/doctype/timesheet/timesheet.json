@@ -19,9 +19,9 @@
   "start_date",
   "end_date",
   "section_break_14",
-  "time_sheets",
+  "time_logs",
   "section_break_16",
-  "total_working_hours",
+  "total_hours",
   "billing_details_section",
   "total_billable_hours",
   "total_billed_hours",
@@ -71,17 +71,23 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
   {
    "fieldname": "employee_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee Name"
   },
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -110,19 +116,8 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "time_sheets",
-   "fieldtype": "Link",
-   "label": "Time Sheets",
-   "options": "Timesheet Detail"
-  },
-  {
    "fieldname": "section_break_16",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "total_working_hours",
-   "fieldtype": "Float",
-   "label": "Total Working Hours"
   },
   {
    "fieldname": "billing_details_section",
@@ -180,10 +175,21 @@
    "options": "Timesheet",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "time_logs",
+   "fieldtype": "Table",
+   "label": "Time Sheets",
+   "options": "Timesheet Detail"
+  },
+  {
+   "fieldname": "total_hours",
+   "fieldtype": "Float",
+   "label": "Total Working Hours"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-16 00:27:59.052523",
+ "modified": "2020-04-22 20:31:54.806363",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Timesheet",

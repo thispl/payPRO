@@ -1,4 +1,5 @@
 {
+ "autoname": "field:designation_name",
  "creation": "2020-04-03 11:14:18.470719",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -11,7 +12,8 @@
   {
    "fieldname": "designation_name",
    "fieldtype": "Data",
-   "label": "Designation Name"
+   "label": "Designation Name",
+   "unique": 1
   },
   {
    "fieldname": "description",
@@ -19,7 +21,7 @@
    "label": "Description"
   }
  ],
- "modified": "2020-04-03 11:14:18.470719",
+ "modified": "2020-04-22 15:59:12.574383",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Designation",

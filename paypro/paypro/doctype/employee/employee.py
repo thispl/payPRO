@@ -47,8 +47,8 @@ class Employee(NestedSet):
 		self.validate_status()
 		self.validate_reports_to()
 		self.validate_preferred_email()
-		if self.job_applicant:
-			self.validate_onboarding_process()
+		# if self.job_applicant:
+		# 	self.validate_onboarding_process()
 
 		if self.user_id:
 			self.validate_user_details()
@@ -73,7 +73,7 @@ class Employee(NestedSet):
 		frappe.utils.nestedset.update_nsm(self)
 
 	def on_update(self):
-		self.update_nsm_model()
+		# self.update_nsm_model()
 		if self.user_id:
 			self.update_user()
 			self.update_user_permissions()
@@ -156,8 +156,8 @@ class Employee(NestedSet):
 		elif self.relieving_date and self.date_of_joining and (getdate(self.relieving_date) < getdate(self.date_of_joining)):
 			throw(_("Relieving Date must be greater than or equal to Date of Joining"))
 
-		elif self.contract_end_date and self.date_of_joining and (getdate(self.contract_end_date) <= getdate(self.date_of_joining)):
-			throw(_("Contract End Date must be greater than Date of Joining"))
+		# elif self.contract_end_date and self.date_of_joining and (getdate(self.contract_end_date) <= getdate(self.date_of_joining)):
+		# 	throw(_("Contract End Date must be greater than Date of Joining"))
 
 	def validate_email(self):
 		if self.company_email:

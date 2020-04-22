@@ -13,13 +13,13 @@ frappe.ui.form.on("Salary Slip", {
 			];
 		});
 
-		// frm.fields_dict["timesheets"].grid.get_field("time_sheet").get_query = function(){
-		// 	return {
-		// 		filters: {
-		// 			employee: frm.doc.employee
-		// 		}
-		// 	}
-		// };
+		frm.fields_dict["salary_slip_timesheet"].grid.get_field("time_sheet").get_query = function(){
+			return {
+				filters: {
+					employee: frm.doc.employee
+				}
+			}
+		};
 
 		frm.set_query("salary_component", "earnings", function() {
 			return {

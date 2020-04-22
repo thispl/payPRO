@@ -12,7 +12,7 @@
   "total_holidays",
   "add_weekly_holidays",
   "weekly_off",
-  "add_to_holidays",
+  "get_weekly_off_dates",
   "holidays_section",
   "holidays",
   "clear_table"
@@ -45,7 +45,7 @@
   },
   {
    "fieldname": "add_weekly_holidays",
-   "fieldtype": "Data",
+   "fieldtype": "Section Break",
    "label": "Add Weekly Holidays"
   },
   {
@@ -55,18 +55,13 @@
    "options": "\nSunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
   },
   {
-   "fieldname": "add_to_holidays",
-   "fieldtype": "Button",
-   "label": "Add to Holidays"
-  },
-  {
    "fieldname": "holidays_section",
    "fieldtype": "Section Break",
    "label": "Holidays"
   },
   {
    "fieldname": "holidays",
-   "fieldtype": "Link",
+   "fieldtype": "Table",
    "label": "Holidays",
    "options": "Holiday"
   },
@@ -74,9 +69,15 @@
    "fieldname": "clear_table",
    "fieldtype": "Button",
    "label": "Clear Table"
+  },
+  {
+   "fieldname": "get_weekly_off_dates",
+   "fieldtype": "Button",
+   "label": "Add to Holidays",
+   "options": "get_weekly_off_dates"
   }
  ],
- "modified": "2020-04-03 22:14:29.197653",
+ "modified": "2020-04-22 16:24:45.519251",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Holiday List",

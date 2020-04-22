@@ -51,8 +51,8 @@ class Timesheet(Document):
 			if d.billable:
 				self.total_billable_hours += flt(d.billing_hours)
 				self.total_billable_amount += flt(d.billing_amount)
-				self.total_billed_amount += flt(d.billing_amount) if d.sales_invoice else 0.0
-				self.total_billed_hours += flt(d.billing_hours) if d.sales_invoice else 0.0
+				# self.total_billed_amount += flt(d.billing_amount) if d.sales_invoice else 0.0
+				# self.total_billed_hours += flt(d.billing_hours) if d.sales_invoice else 0.0
 
 	def calculate_percentage_billed(self):
 		self.per_billed = 0
@@ -79,8 +79,8 @@ class Timesheet(Document):
 		if self.salary_slip:
 			self.status = "Payslip"
 
-		if self.sales_invoice and self.salary_slip:
-			self.status = "Completed"
+		# if self.salary_slip:
+		# 	self.status = "Completed"
 
 	def set_dates(self):
 		if self.docstatus < 2 and self.time_logs:
@@ -105,12 +105,12 @@ class Timesheet(Document):
 	def before_cancel(self):
 		self.set_status()
 
-	def on_cancel(self):
-		self.update_task_and_project()
+	# def on_cancel(self):
+	# 	self.update_task_and_project()
 
 	def on_submit(self):
 		self.validate_mandatory_fields()
-		self.update_task_and_project()
+		# self.update_task_and_project()
 
 	def validate_mandatory_fields(self):
 		for data in self.time_logs:
@@ -123,19 +123,19 @@ class Timesheet(Document):
 			if flt(data.hours) == 0.0:
 				frappe.throw(_("Row {0}: Hours value must be greater than zero.").format(data.idx))
 
-	def update_task_and_project(self):
-		tasks, projects = [], []
+	# def update_task_and_project(self):
+	# 	tasks, projects = [], []
 
-		for data in self.time_logs:
-			if data.task and data.task not in tasks:
-				task = frappe.get_doc("Task", data.task)
-				task.update_time_and_costing()
-				task.save()
-				tasks.append(data.task)
+	# 	for data in self.time_logs:
+	# 		if data.task and data.task not in tasks:
+	# 			task = frappe.get_doc("Task", data.task)
+	# 			task.update_time_and_costing()
+	# 			task.save()
+	# 			tasks.append(data.task)
 
-			elif data.project and data.project not in projects:
-				frappe.get_doc("Project", data.project).update_project()
-				projects.append(data.project)
+	# 		elif data.project and data.project not in projects:
+	# 			frappe.get_doc("Project", data.project).update_project()
+	# 			projects.append(data.project)
 
 	def validate_dates(self):
 		for data in self.time_logs:
@@ -145,16 +145,16 @@ class Timesheet(Document):
 	def validate_time_logs(self):
 		for data in self.get('time_logs'):
 			self.validate_overlap(data)
-			self.validate_task_project()
+			# self.validate_task_project()
 
 	def validate_overlap(self, data):
 		settings = frappe.get_single('Projects Settings')
 		self.validate_overlap_for("user", data, self.user, settings.ignore_user_time_overlap)
 		self.validate_overlap_for("employee", data, self.employee, settings.ignore_employee_time_overlap)
 
-	def validate_task_project(self):
-		for log in self.time_logs:
-			log.project = log.project or frappe.db.get_value("Task", log.task, "project")
+	# def validate_task_project(self):
+	# 	for log in self.time_logs:
+	# 		log.project = log.project or frappe.db.get_value("Task", log.task, "project")
 
 	def validate_overlap_for(self, fieldname, args, value, ignore_validation=False):
 		if not value or ignore_validation:
@@ -215,15 +215,15 @@ class Timesheet(Document):
 		if not ts_detail.billable:
 			ts_detail.billing_rate = 0.0
 
-@frappe.whitelist()
-def get_projectwise_timesheet_data(project, parent=None):
-	cond = ''
-	if parent:
-		cond = "and parent = %(parent)s"
+# @frappe.whitelist()
+# def get_projectwise_timesheet_data(project, parent=None):
+# 	cond = ''
+# 	if parent:
+# 		cond = "and parent = %(parent)s"
 
-	return frappe.db.sql("""select name, parent, billing_hours, billing_amount as billing_amt
-			from `tabTimesheet Detail` where parenttype = 'Timesheet' and docstatus=1 and project = %(project)s {0} and billable = 1
-			and sales_invoice is null""".format(cond), {'project': project, 'parent': parent}, as_dict=1)
+# 	return frappe.db.sql("""select name, parent, billing_hours, billing_amount as billing_amt
+# 			from `tabTimesheet Detail` where parenttype = 'Timesheet' and docstatus=1 and project = %(project)s {0} and billable = 1
+# 			and sales_invoice is null""".format(cond), {'project': project, 'parent': parent}, as_dict=1)
 
 @frappe.whitelist()
 def get_timesheet(doctype, txt, searchfield, start, page_len, filters):
@@ -258,42 +258,42 @@ def get_timesheet_data(name, project):
 		'timesheet_detail': data[0].name if data and project and project!= '' else None
 	}
 
-@frappe.whitelist()
-def make_sales_invoice(source_name, item_code=None, customer=None):
-	target = frappe.new_doc("Sales Invoice")
-	timesheet = frappe.get_doc('Timesheet', source_name)
+# @frappe.whitelist()
+# def make_sales_invoice(source_name, item_code=None, customer=None):
+# 	target = frappe.new_doc("Sales Invoice")
+# 	timesheet = frappe.get_doc('Timesheet', source_name)
 
-	if not timesheet.total_billable_hours:
-		frappe.throw(_("Invoice can't be made for zero billing hour"))
+# 	if not timesheet.total_billable_hours:
+# 		frappe.throw(_("Invoice can't be made for zero billing hour"))
 
-	if timesheet.total_billable_hours == timesheet.total_billed_hours:
-		frappe.throw(_("Invoice already created for all billing hours"))
+# 	if timesheet.total_billable_hours == timesheet.total_billed_hours:
+# 		frappe.throw(_("Invoice already created for all billing hours"))
 
-	hours = flt(timesheet.total_billable_hours) - flt(timesheet.total_billed_hours)
-	billing_amount = flt(timesheet.total_billable_amount) - flt(timesheet.total_billed_amount)
-	billing_rate = billing_amount / hours
+# 	hours = flt(timesheet.total_billable_hours) - flt(timesheet.total_billed_hours)
+# 	billing_amount = flt(timesheet.total_billable_amount) - flt(timesheet.total_billed_amount)
+# 	billing_rate = billing_amount / hours
 
-	target.company = timesheet.company
-	if customer:
-		target.customer = customer
+# 	target.company = timesheet.company
+# 	if customer:
+# 		target.customer = customer
 
-	if item_code:
-		target.append('items', {
-			'item_code': item_code,
-			'qty': hours,
-			'rate': billing_rate
-		})
+# 	if item_code:
+# 		target.append('items', {
+# 			'item_code': item_code,
+# 			'qty': hours,
+# 			'rate': billing_rate
+# 		})
 
-	target.append('timesheets', {
-		'time_sheet': timesheet.name,
-		'billing_hours': hours,
-		'billing_amount': billing_amount
-	})
+# 	target.append('timesheets', {
+# 		'time_sheet': timesheet.name,
+# 		'billing_hours': hours,
+# 		'billing_amount': billing_amount
+# 	})
 
-	target.run_method("calculate_billing_amount_for_timesheet")
-	target.run_method("set_missing_values")
+# 	target.run_method("calculate_billing_amount_for_timesheet")
+# 	target.run_method("set_missing_values")
 
-	return target
+# 	return target
 
 @frappe.whitelist()
 def make_salary_slip(source_name, target_doc=None):
@@ -353,38 +353,38 @@ def get_events(start, end, filters=None):
 			"end": end
 		}, as_dict=True, update={"allDay": 0})
 
-def get_timesheets_list(doctype, txt, filters, limit_start, limit_page_length=20, order_by="modified"):
-	user = frappe.session.user
-	# find customer name from contact.
-	customer = ''
-	timesheets = []
+# def get_timesheets_list(doctype, txt, filters, limit_start, limit_page_length=20, order_by="modified"):
+# 	user = frappe.session.user
+# 	# find customer name from contact.
+# 	customer = ''
+# 	timesheets = []
 
-	contact = frappe.db.exists('Contact', {'user': user})
-	if contact:
-		# find customer
-		contact = frappe.get_doc('Contact', contact)
-		customer = contact.get_link_for('Customer')
+# 	contact = frappe.db.exists('Contact', {'user': user})
+# 	if contact:
+# 		# find customer
+# 		contact = frappe.get_doc('Contact', contact)
+# 		customer = contact.get_link_for('Customer')
 
-	if customer:
-		sales_invoices = [d.name for d in frappe.get_all('Sales Invoice', filters={'customer': customer})] or [None]
-		projects = [d.name for d in frappe.get_all('Project', filters={'customer': customer})]
-		# Return timesheet related data to web portal.
-		timesheets = frappe.db.sql('''
-			SELECT
-				ts.name, tsd.activity_type, ts.status, ts.total_billable_hours,
-				COALESCE(ts.sales_invoice, tsd.sales_invoice) AS sales_invoice, tsd.project
-			FROM `tabTimesheet` ts, `tabTimesheet Detail` tsd
-			WHERE tsd.parent = ts.name AND
-				(
-					ts.sales_invoice IN %(sales_invoices)s OR
-					tsd.sales_invoice IN %(sales_invoices)s OR
-					tsd.project IN %(projects)s
-				)
-			ORDER BY `end_date` ASC
-			LIMIT {0}, {1}
-		'''.format(limit_start, limit_page_length), dict(sales_invoices=sales_invoices, projects=projects), as_dict=True) #nosec
+# 	if customer:
+# 		sales_invoices = [d.name for d in frappe.get_all('Sales Invoice', filters={'customer': customer})] or [None]
+# 		projects = [d.name for d in frappe.get_all('Project', filters={'customer': customer})]
+# 		# Return timesheet related data to web portal.
+# 		timesheets = frappe.db.sql('''
+# 			SELECT
+# 				ts.name, tsd.activity_type, ts.status, ts.total_billable_hours,
+# 				COALESCE(ts.sales_invoice, tsd.sales_invoice) AS sales_invoice, tsd.project
+# 			FROM `tabTimesheet` ts, `tabTimesheet Detail` tsd
+# 			WHERE tsd.parent = ts.name AND
+# 				(
+# 					ts.sales_invoice IN %(sales_invoices)s OR
+# 					tsd.sales_invoice IN %(sales_invoices)s OR
+# 					tsd.project IN %(projects)s
+# 				)
+# 			ORDER BY `end_date` ASC
+# 			LIMIT {0}, {1}
+# 		'''.format(limit_start, limit_page_length), dict(sales_invoices=sales_invoices, projects=projects), as_dict=True) #nosec
 
-	return timesheets
+# 	return timesheets
 
 def get_list_context(context=None):
 	return {

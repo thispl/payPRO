@@ -6,9 +6,9 @@
  "engine": "InnoDB",
  "field_order": [
   "activity_type",
-  "default_costing_rate",
+  "costing_rate",
   "column_break_3",
-  "default_billing_rate",
+  "billing_rate",
   "disabled"
  ],
  "fields": [
@@ -19,27 +19,27 @@
    "unique": 1
   },
   {
-   "fieldname": "default_costing_rate",
-   "fieldtype": "Currency",
-   "label": "Default Costing Rate"
-  },
-  {
    "fieldname": "column_break_3",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "default_billing_rate",
-   "fieldtype": "Currency",
-   "label": "Default Billing Rate"
   },
   {
    "default": "0",
    "fieldname": "disabled",
    "fieldtype": "Check",
    "label": "Disabled"
+  },
+  {
+   "fieldname": "costing_rate",
+   "fieldtype": "Currency",
+   "label": "Default Costing Rate"
+  },
+  {
+   "fieldname": "billing_rate",
+   "fieldtype": "Currency",
+   "label": "Default Billing Rate"
   }
  ],
- "modified": "2020-04-15 23:09:42.186711",
+ "modified": "2020-04-22 20:28:11.355546",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Activity Type",

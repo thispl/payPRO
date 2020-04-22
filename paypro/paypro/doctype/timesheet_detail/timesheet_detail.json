@@ -7,10 +7,18 @@
   "activity_type",
   "from_time",
   "column_break_3",
-  "expected_hrs",
+  "expected_hours",
   "to_time",
-  "hrs",
-  "completed"
+  "hours",
+  "completed",
+  "section_break_8",
+  "billable",
+  "billing_hours",
+  "billing_rate",
+  "billing_amount",
+  "column_break_13",
+  "costing_rate",
+  "costing_amount"
  ],
  "fields": [
   {
@@ -31,32 +39,69 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "expected_hrs",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Expected Hrs"
-  },
-  {
    "fieldname": "to_time",
    "fieldtype": "Datetime",
    "in_list_view": 1,
    "label": "To Time"
   },
   {
-   "fieldname": "hrs",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Hrs"
-  },
-  {
    "default": "0",
    "fieldname": "completed",
    "fieldtype": "Check",
    "label": "Completed"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "billable",
+   "fieldtype": "Check",
+   "label": "Bill"
+  },
+  {
+   "fieldname": "billing_hours",
+   "fieldtype": "Float",
+   "label": "Billing Hours"
+  },
+  {
+   "fieldname": "billing_rate",
+   "fieldtype": "Currency",
+   "label": "Billing Rate"
+  },
+  {
+   "fieldname": "billing_amount",
+   "fieldtype": "Currency",
+   "label": "Billing Amount"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "costing_rate",
+   "fieldtype": "Currency",
+   "label": "Costing Rate"
+  },
+  {
+   "fieldname": "costing_amount",
+   "fieldtype": "Currency",
+   "label": "Costing Amount"
+  },
+  {
+   "fieldname": "expected_hours",
+   "fieldtype": "Float",
+   "label": "Expected Hrs"
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "label": "Hrs"
   }
  ],
  "istable": 1,
- "modified": "2020-04-17 20:25:38.136685",
+ "modified": "2020-04-22 23:17:41.145183",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Timesheet Detail",
