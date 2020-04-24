@@ -6,7 +6,7 @@ import frappe
 import frappe.share
 from frappe import _
 from frappe.utils import cstr, now_datetime, cint, flt, get_time, get_link_to_form
-from paypro.controllers.status_updater import StatusUpdater
+from paypro.paypro.doctype.controllers.status_updater import StatusUpdater
 
 from six import string_types
 

@@ -1,0 +1,35 @@
+{
+ "creation": "2020-04-25 00:23:12.534394",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "start_date",
+  "end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-25 00:23:12.534394",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Payroll Period Date",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

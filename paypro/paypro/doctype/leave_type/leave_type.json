@@ -11,10 +11,10 @@
   "maximum_continuous_days_applicable",
   "column_break_5",
   "is_carry_forward",
-  "is_leave_without_pay",
+  "is_lwp",
   "is_optional_leave",
   "allow_negative",
-  "include_holidays",
+  "include_holiday",
   "is_compensatory"
  ],
  "fields": [
@@ -51,12 +51,6 @@
   },
   {
    "default": "0",
-   "fieldname": "is_leave_without_pay",
-   "fieldtype": "Check",
-   "label": "Is Leave Without Pay"
-  },
-  {
-   "default": "0",
    "fieldname": "is_optional_leave",
    "fieldtype": "Check",
    "label": "Is Optional Leave"
@@ -65,22 +59,28 @@
    "default": "0",
    "fieldname": "allow_negative",
    "fieldtype": "Check",
-   "label": "Allow Negative"
-  },
-  {
-   "default": "0",
-   "fieldname": "include_holidays",
-   "fieldtype": "Check",
-   "label": "Include holidays"
+   "label": "Allow Negative Balance"
   },
   {
    "default": "0",
    "fieldname": "is_compensatory",
    "fieldtype": "Check",
    "label": "Is Compensatory"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_lwp",
+   "fieldtype": "Check",
+   "label": "Is Leave Without Pay"
+  },
+  {
+   "default": "0",
+   "fieldname": "include_holiday",
+   "fieldtype": "Check",
+   "label": "Include holidays within leaves as leaves"
   }
  ],
- "modified": "2020-04-03 21:07:56.648429",
+ "modified": "2020-04-25 00:10:48.242479",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Type",

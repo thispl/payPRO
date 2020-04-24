@@ -17,7 +17,7 @@
   "designation",
   "number_of_employees",
   "section_break_12",
-  "employee_details",
+  "employees",
   "section_break_14",
   "validate_attendance",
   "section_break_16",
@@ -94,12 +94,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "employee_details",
-   "fieldtype": "Table",
-   "label": "Employee Details",
-   "options": "Payroll Employee Detail"
-  },
-  {
    "fieldname": "section_break_14",
    "fieldtype": "Section Break"
   },
@@ -158,10 +152,16 @@
    "options": "Payroll Entry",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Table",
+   "label": "Employee Details",
+   "options": "Payroll Employee Detail"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-15 22:14:32.423157",
+ "modified": "2020-04-24 23:07:49.350458",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Payroll Entry",

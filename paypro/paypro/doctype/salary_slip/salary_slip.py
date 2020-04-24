@@ -12,10 +12,10 @@ from frappe.model.naming import make_autoname
 from frappe import msgprint, _
 from paypro.paypro.doctype.payroll_entry.payroll_entry import get_start_end_dates
 from paypro.paypro.doctype.employee.employee import get_holiday_list_for_employee
-from paypro.utilities.transaction_base import TransactionBase
+from paypro.paypro.doctype.utilities.transaction_base import TransactionBase
 from frappe.utils.background_jobs import enqueue
 from paypro.paypro.doctype.additional_salary.additional_salary import get_additional_salary_component
-# from paypro.paypro.doctype.payroll_period.payroll_period import get_period_factor, get_payroll_period
+from paypro.paypro.doctype.payroll_period.payroll_period import get_period_factor, get_payroll_period
 # from erpnext.hr.doctype.employee_benefit_application.employee_benefit_application import get_benefit_component_amount
 # from erpnext.hr.doctype.employee_benefit_claim.employee_benefit_claim import get_benefit_claim_amount, get_last_payroll_period_benefits
 # from erpnext.loan_management.doctype.loan_repayment.loan_repayment import calculate_amounts, create_repayment_entry

@@ -374,7 +374,7 @@ def get_account_list(doctype, txt, searchfield, start, page_len, filters):
 
 @frappe.whitelist()
 def get_income_account(doctype, txt, searchfield, start, page_len, filters):
-	from erpnext.controllers.queries import get_match_cond
+	from paypro.paypro.doctype.controllers.queries import get_match_cond
 
 	# income account can be any Credit account,
 	# but can also be a Asset account with account_type='Income Account' in special circumstances.
@@ -400,7 +400,7 @@ def get_income_account(doctype, txt, searchfield, start, page_len, filters):
 
 @frappe.whitelist()
 def get_expense_account(doctype, txt, searchfield, start, page_len, filters):
-	from erpnext.controllers.queries import get_match_cond
+	from paypro.paypro.doctype.controllers.queries import get_match_cond
 
 	if not filters: filters = {}
 

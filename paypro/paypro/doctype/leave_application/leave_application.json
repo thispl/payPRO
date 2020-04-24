@@ -25,6 +25,7 @@
   "leave_approver_name",
   "column_break_19",
   "status",
+  "salary_slip",
   "section_break_19",
   "posting_date",
   "column_break_21",
@@ -161,10 +162,16 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Open\nApproved\nRejected\nCancelled"
+  },
+  {
+   "fieldname": "salary_slip",
+   "fieldtype": "Link",
+   "label": "Salary Slip",
+   "options": "Salary Slip"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-03 21:49:58.029868",
+ "modified": "2020-04-25 00:13:37.786776",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Application",
