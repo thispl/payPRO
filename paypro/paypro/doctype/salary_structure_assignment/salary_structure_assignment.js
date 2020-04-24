@@ -3,6 +3,9 @@
 
 frappe.ui.form.on('Salary Structure Assignment', {
 	setup: function(frm) {
+		frm.add_fetch('employee', 'employee_name', 'employee_name');
+		frm.add_fetch('employee', 'department', 'department');
+		frm.add_fetch('employee', 'designation', 'designation');
 		frm.set_query("employee", function() {
 			return {
 				query: "paypro.paypro.doctype.controllers.queries.employee_query",
