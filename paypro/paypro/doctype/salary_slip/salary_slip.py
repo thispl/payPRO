@@ -3,7 +3,7 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-import frappe
+import frappe, paypro
 import datetime, math
 
 from frappe.utils import add_days, cint, cstr, flt, getdate, rounded, date_diff, money_in_words
@@ -51,7 +51,7 @@ class SalarySlip(TransactionBase):
 
 		self.calculate_net_pay()
 
-		company_currency = erpnext.get_company_currency(self.company)
+		company_currency = paypro.get_company_currency(self.company)
 		total = self.net_pay if self.is_rounding_total_disabled() else self.rounded_total
 		self.total_in_words = money_in_words(total, company_currency)
 

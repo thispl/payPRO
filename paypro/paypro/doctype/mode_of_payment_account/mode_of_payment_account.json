@@ -1,0 +1,35 @@
+{
+ "creation": "2020-04-25 23:18:02.905258",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "default_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "default_account",
+   "fieldtype": "Link",
+   "label": "Default Account",
+   "options": "Account"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-25 23:18:02.905258",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Mode of Payment Account",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
