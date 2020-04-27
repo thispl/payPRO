@@ -51,49 +51,49 @@ frappe.ui.form.on("Timesheet", {
 			// 		"fa fa-file-text");
 			// }
 
-		// 	if(!frm.doc.salary_slip && frm.doc.employee){
-		// 		frm.add_custom_button(__('Create Salary Slip'), function() { frm.trigger("make_salary_slip") },
-		// 			"fa fa-file-text");
-		// 	}
-		// }
-
-		if (frm.doc.docstatus < 1) {
-
-			let button = 'Start Timer';
-			$.each(frm.doc.time_logs || [], function(i, row) {
-				if ((row.from_time <= frappe.datetime.now_datetime()) && !row.completed) {
-					button = 'Resume Timer';
-				}
-			});
-
-			frm.add_custom_button(__(button), function() {
-				var flag = true;
-				$.each(frm.doc.time_logs || [], function(i, row) {
-					// Fetch the row for which from_time is not present
-					if (flag && row.activity_type && !row.from_time){
-						erpnext.timesheet.timer(frm, row);
-						row.from_time = frappe.datetime.now_datetime();
-						frm.refresh_fields("time_logs");
-						frm.save();
-						flag = false;
-					}
-					// Fetch the row for timer where activity is not completed and from_time is before now_time
-					if (flag && row.from_time <= frappe.datetime.now_datetime() && !row.completed) {
-						let timestamp = moment(frappe.datetime.now_datetime()).diff(moment(row.from_time),"seconds");
-						erpnext.timesheet.timer(frm, row, timestamp);
-						flag = false;
-					}
-				});
-				// If no activities found to start a timer, create new
-				if (flag) {
-					erpnext.timesheet.timer(frm);
-				}
-			}).addClass("btn-primary");
+		if(!frm.doc.salary_slip && frm.doc.employee){
+			frm.add_custom_button(__('Create Salary Slip'), function() { frm.trigger("make_salary_slip") },
+				"fa fa-file-text");
 		}
-		if(frm.doc.per_billed > 0) {
-			frm.fields_dict["time_logs"].grid.toggle_enable("billing_hours", false);
-			frm.fields_dict["time_logs"].grid.toggle_enable("billable", false);
-		}
+		// },
+
+	// 	if (frm.doc.docstatus < 1) {
+
+	// 		let button = 'Start Timer';
+	// 		$.each(frm.doc.time_logs || [], function(i, row) {
+	// 			if ((row.from_time <= frappe.datetime.now_datetime()) && !row.completed) {
+	// 				button = 'Resume Timer';
+	// 			}
+	// 		});
+
+	// 		frm.add_custom_button(__(button), function() {
+	// 			var flag = true;
+	// 			$.each(frm.doc.time_logs || [], function(i, row) {
+	// 				// Fetch the row for which from_time is not present
+	// 				if (flag && row.activity_type && !row.from_time){
+	// 					erpnext.timesheet.timer(frm, row);
+	// 					row.from_time = frappe.datetime.now_datetime();
+	// 					frm.refresh_fields("time_logs");
+	// 					frm.save();
+	// 					flag = false;
+	// 				}
+	// 				// Fetch the row for timer where activity is not completed and from_time is before now_time
+	// 				if (flag && row.from_time <= frappe.datetime.now_datetime() && !row.completed) {
+	// 					let timestamp = moment(frappe.datetime.now_datetime()).diff(moment(row.from_time),"seconds");
+	// 					erpnext.timesheet.timer(frm, row, timestamp);
+	// 					flag = false;
+	// 				}
+	// 			});
+	// 			// If no activities found to start a timer, create new
+	// 			if (flag) {
+	// 				erpnext.timesheet.timer(frm);
+	// 			}
+	// 		}).addClass("btn-primary");
+	// 	}
+	// 	if(frm.doc.per_billed > 0) {
+	// 		frm.fields_dict["time_logs"].grid.toggle_enable("billing_hours", false);
+	// 		frm.fields_dict["time_logs"].grid.toggle_enable("billable", false);
+	// 	}
 	},
 
 	company: function(frm) {
@@ -179,15 +179,15 @@ frappe.ui.form.on("Timesheet Detail", {
 		}
 	},
 
-	time_logs_add: function(frm) {
-		var $trigger_again = $('.form-grid').find('.grid-row').find('.btn-open-row');
-		$trigger_again.on('click', () => {
-			$('.form-grid')
-				.find('[data-fieldname="timer"]')
-				.append(frappe.render_template("timesheet"));
-			frm.trigger("control_timer");
-		});
-	},
+	// time_logs_add: function(frm) {
+	// 	var $trigger_again = $('.form-grid').find('.grid-row').find('.btn-open-row');
+	// 	$trigger_again.on('click', () => {
+	// 		$('.form-grid')
+	// 			.find('[data-fieldname="timer"]')
+	// 			.append(frappe.render_template("timesheet"));
+	// 		frm.trigger("control_timer");
+	// 	});
+	// },
 	hours: function(frm, cdt, cdn) {
 		calculate_end_time(frm, cdt, cdn);
 	},
