@@ -1,33 +1,31 @@
 {
- "creation": "2020-04-25 23:18:02.905258",
+ "creation": "2020-04-28 23:04:17.955198",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "company",
-  "default_account"
+  "block_date",
+  "reason"
  ],
  "fields": [
   {
-   "fieldname": "company",
-   "fieldtype": "Link",
+   "fieldname": "block_date",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Company",
-   "options": "Company"
+   "label": "Block Date"
   },
   {
-   "fieldname": "default_account",
-   "fieldtype": "Link",
+   "fieldname": "reason",
+   "fieldtype": "Text",
    "in_list_view": 1,
-   "label": "Default Account",
-   "options": "Account"
+   "label": "Reason"
   }
  ],
  "istable": 1,
- "modified": "2020-04-28 23:41:39.099636",
+ "modified": "2020-04-28 23:41:22.379576",
  "modified_by": "Administrator",
  "module": "Paypro",
- "name": "Mode of Payment Account",
+ "name": "Leave Block List Date",
  "owner": "Administrator",
  "permissions": [],
  "quick_entry": 1,

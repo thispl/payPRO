@@ -28,10 +28,27 @@ def get_data():
 					"name": "Designation",
 					"description": _("paypro"),
 					"onboard": 1,
-				},
+				},               
+            ]
+        },
+		{
+			"label": _("Shift Management"),
+			"items": [                
                 {
 					"type": "doctype",
 					"name": "Shift Type",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Shift Request",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Shift Assignment",
 					"description": _("paypro"),
 					"onboard": 1,
 				},               
@@ -52,6 +69,12 @@ def get_data():
 					"description": _("paypro"),
 					"onboard": 1,
 				},
+				{
+					"type": "doctype",
+					"name": "Attendance Request",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
             ]
         },
         {
@@ -60,6 +83,12 @@ def get_data():
                 {
 					"type": "doctype",
 					"name": "Leave Application",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Compensatory Leave Request",
 					"description": _("paypro"),
 					"onboard": 1,
 				},
@@ -83,11 +112,16 @@ def get_data():
 				},
 				{
 					"type": "doctype",
-					"name": "Holiday List",
+					"name": "Leave Encashment",
 					"description": _("paypro"),
 					"onboard": 1,
 				},
-               
+				{
+					"type": "doctype",
+					"name": "Leave Block List",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
             ]
         },
         {
@@ -189,6 +223,35 @@ def get_data():
                 {
 					"type": "doctype",
 					"name": "HR Settings",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Holiday List",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+            ]
+        },
+		{
+			"label": _("Accounting"),
+			"items": [
+                {
+					"type": "doctype",
+					"name": "Account",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+                {
+					"type": "doctype",
+					"name": "Mode of Payment",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Fiscal Year",
 					"description": _("paypro"),
 					"onboard": 1,
 				},

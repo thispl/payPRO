@@ -6,7 +6,16 @@
  "engine": "InnoDB",
  "field_order": [
   "department_name",
-  "company"
+  "parent_department",
+  "company",
+  "is_group",
+  "disabled",
+  "section_break_6",
+  "leave_block_list",
+  "section_break_8",
+  "leave_approver",
+  "section_break_10",
+  "expense_approver"
  ],
  "fields": [
   {
@@ -20,9 +29,57 @@
    "fieldtype": "Link",
    "label": "Company",
    "options": "Company"
+  },
+  {
+   "fieldname": "parent_department",
+   "fieldtype": "Link",
+   "label": "Parent Department",
+   "options": "Department"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "leave_block_list",
+   "fieldtype": "Link",
+   "label": "Leave Block List",
+   "options": "Leave Block List"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "leave_approver",
+   "fieldtype": "Table",
+   "label": "Leave Approver",
+   "options": "Department Approver"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "expense_approver",
+   "fieldtype": "Table",
+   "label": "Expense Approver",
+   "options": "Department Approver"
   }
  ],
- "modified": "2020-04-22 16:00:17.154741",
+ "modified": "2020-04-28 23:40:40.041373",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Department",

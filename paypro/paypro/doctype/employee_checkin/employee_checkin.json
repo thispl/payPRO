@@ -1,31 +1,28 @@
 {
- "autoname": "naming_series:",
+ "autoname": "EMP-CKIN-.MM.-.YYYY.-.######",
  "creation": "2020-04-03 21:23:55.834756",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
   "employee",
   "employee_name",
+  "log_type",
+  "shift",
   "column_break_4",
-  "date",
+  "time",
   "department",
   "designation",
+  "skip_auto_attendance",
   "section_break_8",
   "device_id",
   "device_log_id",
   "column_break_11",
   "log_date",
-  "log_time"
+  "log_time",
+  "attendance"
  ],
  "fields": [
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Naming Series",
-   "options": "HR-EC-"
-  },
   {
    "fieldname": "employee",
    "fieldtype": "Link",
@@ -40,11 +37,6 @@
   {
    "fieldname": "column_break_4",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date"
   },
   {
    "fieldname": "department",
@@ -85,9 +77,38 @@
    "fieldname": "log_time",
    "fieldtype": "Time",
    "label": "Log Time"
+  },
+  {
+   "fieldname": "log_type",
+   "fieldtype": "Select",
+   "label": "Log Type",
+   "options": "IN\nOUT"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "label": "Time"
+  },
+  {
+   "default": "0",
+   "fieldname": "skip_auto_attendance",
+   "fieldtype": "Check",
+   "label": "Skip Auto Attendance"
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Link",
+   "label": "Attendance Marked",
+   "options": "Attendance"
   }
  ],
- "modified": "2020-04-03 21:23:55.834756",
+ "modified": "2020-04-29 00:25:05.856779",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee Checkin",
