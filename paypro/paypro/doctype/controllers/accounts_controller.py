@@ -30,7 +30,7 @@ class AccountsController(TransactionBase):
 	@property
 	def company_currency(self):
 		if not hasattr(self, "__company_currency"):
-			self.__company_currency = erpnext.get_company_currency(self.company)
+			self.__company_currency = paypro.get_company_currency(self.company)
 
 		return self.__company_currency
 
@@ -175,7 +175,7 @@ class AccountsController(TransactionBase):
 					break
 
 	def calculate_taxes_and_totals(self):
-		from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals
+		from paypro.paypro.doctype.controllers.taxes_and_totals import calculate_taxes_and_totals
 		calculate_taxes_and_totals(self)
 
 		if self.doctype in ["Quotation", "Sales Order", "Delivery Note", "Sales Invoice"]:
@@ -197,7 +197,7 @@ class AccountsController(TransactionBase):
 	def validate_due_date(self):
 		if self.get('is_pos'): return
 
-		from erpnext.accounts.party import validate_due_date
+		from paypro.accounts.party import validate_due_date
 		if self.doctype == "Sales Invoice":
 			if not self.due_date:
 				frappe.throw(_("Due Date is mandatory"))
@@ -246,7 +246,7 @@ class AccountsController(TransactionBase):
 
 	def set_missing_item_details(self, for_validate=False):
 		"""set missing item values"""
-		from erpnext.stock.doctype.serial_no.serial_no import get_serial_nos
+		from paypro.stock.doctype.serial_no.serial_no import get_serial_nos
 
 		if hasattr(self, "items"):
 			parent_dict = {}
@@ -596,7 +596,7 @@ class AccountsController(TransactionBase):
 			reconcile_against_document(lst)
 
 	def on_cancel(self):
-		from erpnext.accounts.utils import unlink_ref_doc_from_payment_entries
+		from paypro.accounts.utils import unlink_ref_doc_from_payment_entries
 
 		if self.doctype in ["Sales Invoice", "Purchase Invoice"]:
 			if self.is_return: return
@@ -609,7 +609,7 @@ class AccountsController(TransactionBase):
 				unlink_ref_doc_from_payment_entries(self)
 
 	def validate_multiple_billing(self, ref_dt, item_ref_dn, based_on, parentfield):
-		from erpnext.controllers.status_updater import get_allowance_for
+		from paypro.paypro.doctype.controllers.status_updater import get_allowance_for
 		item_allowance = {}
 		global_qty_allowance, global_amount_allowance = None, None
 
@@ -647,7 +647,7 @@ class AccountsController(TransactionBase):
 							.format(item.item_code, item.idx, max_allowed_amt))
 
 	def get_company_default(self, fieldname):
-		from erpnext.accounts.utils import get_company_default
+		from paypro.accounts.utils import get_company_default
 		return get_company_default(self.company, fieldname)
 
 	def get_stock_items(self):
@@ -1286,6 +1286,6 @@ def update_child_qty_rate(parent_doctype, trans_items, parent_doctype_name, chil
 	parent.update_billing_percentage()
 	parent.set_status()
 
-@erpnext.allow_regional
-def validate_regional(doc):
-	pass
+# @paypro.allow_regional
+# def validate_regional(doc):
+# 	pass

@@ -115,7 +115,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-22 16:35:28.536755",
+ "modified": "2020-04-29 19:16:35.521035",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Additional Salary",
@@ -136,5 +136,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "employee",
  "track_changes": 1
 }

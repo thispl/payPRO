@@ -1,7 +1,7 @@
 // Copyright (c) 2020, Teampro and contributors
 // For license information, please see license.txt
 
-// {% include 'erpnext/loan_management/loan_common.js' %};
+{% include 'paypro/paypro/loan_common.js' %};
 
 frappe.ui.form.on('Loan Application', {
 

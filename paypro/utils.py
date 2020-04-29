@@ -272,7 +272,7 @@ def get_leave_period(from_date, to_date, company):
 
 def generate_leave_encashment():
 	''' Generates a draft leave encashment on allocation expiry '''
-	from erpnext.hr.doctype.leave_encashment.leave_encashment import create_leave_encashment
+	from paypro.paypro.doctype.leave_encashment.leave_encashment import create_leave_encashment
 
 	if frappe.db.get_single_value('HR Settings', 'auto_leave_encashment'):
 		leave_type = frappe.get_all('Leave Type', filters={'allow_encashment': 1}, fields=['name'])
@@ -406,17 +406,17 @@ def get_holidays_for_employee(employee, start_date, end_date):
 
 	return holidays
 
-@erpnext.allow_regional
-def calculate_annual_eligible_hra_exemption(doc):
-	# Don't delete this method, used for localization
-	# Indian HRA Exemption Calculation
-	return {}
+# @paypro.allow_regional
+# def calculate_annual_eligible_hra_exemption(doc):
+# 	# Don't delete this method, used for localization
+# 	# Indian HRA Exemption Calculation
+# 	return {}
 
-@erpnext.allow_regional
-def calculate_hra_exemption_for_period(doc):
-	# Don't delete this method, used for localization
-	# Indian HRA Exemption Calculation
-	return {}
+# @paypro.allow_regional
+# def calculate_hra_exemption_for_period(doc):
+# 	# Don't delete this method, used for localization
+# 	# Indian HRA Exemption Calculation
+# 	return {}
 
 def get_previous_claimed_amount(employee, payroll_period, non_pro_rata=False, component=False):
 	total_claimed_amount = 0
@@ -797,7 +797,7 @@ def check_if_advance_entry_modified(args):
 			and t1.docstatus=1 """.format(dr_or_cr = args.get("dr_or_cr")), args)
 	else:
 		party_account_field = ("paid_from"
-			if erpnext.get_party_account_type(args.party_type) == 'Receivable' else "paid_to")
+			if paypro.get_party_account_type(args.party_type) == 'Receivable' else "paid_to")
 
 		if args.voucher_detail_no:
 			ret = frappe.db.sql("""select t1.name
@@ -1081,7 +1081,7 @@ def get_outstanding_invoices(party_type, party, account, condition=None, filters
 		party_account_type = "Receivable" if root_type == "Asset" else "Payable"
 		party_account_type = account_type or party_account_type
 	else:
-		party_account_type = erpnext.get_party_account_type(party_type)
+		party_account_type = paypro.get_party_account_type(party_type)
 
 	if party_account_type == 'Receivable':
 		dr_or_cr = "debit_in_account_currency - credit_in_account_currency"
@@ -1178,7 +1178,7 @@ def get_companies():
 
 @frappe.whitelist()
 def get_children(doctype, parent, company, is_root=False):
-	from erpnext.accounts.report.financial_statements import sort_accounts
+	from paypro.accounts.report.financial_statements import sort_accounts
 
 	parent_fieldname = 'parent_' + doctype.lower().replace(' ', '_')
 	fields = [
@@ -1212,7 +1212,7 @@ def get_children(doctype, parent, company, is_root=False):
 	return acc
 
 def create_payment_gateway_account(gateway):
-	from erpnext.setup.setup_wizard.operations.company_setup import create_bank_account
+	from paypro.setup.setup_wizard.operations.company_setup import create_bank_account
 
 	company = frappe.db.get_value("Global Defaults", None, "default_company")
 	if not company:
@@ -1311,7 +1311,7 @@ def get_autoname_with_number(number_value, doc_title, name, company):
 
 @frappe.whitelist()
 def get_coa(doctype, parent, is_root, chart=None):
-	from erpnext.accounts.doctype.account.chart_of_accounts.chart_of_accounts import build_tree_from_json
+	from paypro.accounts.doctype.account.chart_of_accounts.chart_of_accounts import build_tree_from_json
 
 	# add chart to flags to retrieve when called from expand all function
 	chart = chart if chart else frappe.flags.chart

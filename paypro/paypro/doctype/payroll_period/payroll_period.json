@@ -26,11 +26,13 @@
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Start Date"
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "End Date"
   },
   {
@@ -45,7 +47,7 @@
    "options": "Payroll Period Date"
   }
  ],
- "modified": "2020-04-25 00:25:46.419711",
+ "modified": "2020-04-29 19:22:19.361001",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Payroll Period",

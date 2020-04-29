@@ -21,12 +21,15 @@
   {
    "fieldname": "leave_type_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Leave Type Name",
    "unique": 1
   },
   {
    "fieldname": "max_leaves_allowed",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Max Leaves Allowed"
   },
   {
@@ -47,6 +50,7 @@
    "default": "0",
    "fieldname": "is_carry_forward",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Is Carry Forward"
   },
   {
@@ -65,6 +69,7 @@
    "default": "0",
    "fieldname": "is_compensatory",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Is Compensatory"
   },
   {
@@ -77,10 +82,11 @@
    "default": "0",
    "fieldname": "include_holiday",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Include holidays within leaves as leaves"
   }
  ],
- "modified": "2020-04-25 00:10:48.242479",
+ "modified": "2020-04-29 18:47:25.443180",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Type",

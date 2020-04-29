@@ -15,6 +15,8 @@
   {
    "fieldname": "activity_type",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Activity Type",
    "unique": 1
   },
@@ -26,20 +28,23 @@
    "default": "0",
    "fieldname": "disabled",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Disabled"
   },
   {
    "fieldname": "costing_rate",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Default Costing Rate"
   },
   {
    "fieldname": "billing_rate",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Default Billing Rate"
   }
  ],
- "modified": "2020-04-22 20:28:11.355546",
+ "modified": "2020-04-29 19:26:03.181374",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Activity Type",

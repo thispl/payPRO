@@ -17,6 +17,8 @@
   {
    "fieldname": "leave_block_list_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Leave Block List Name",
    "unique": 1
   },
@@ -30,6 +32,7 @@
    "default": "0",
    "fieldname": "applies_to_all_departments",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Applies to Company"
   },
   {
@@ -55,7 +58,7 @@
    "options": "Leave Block List Allow"
   }
  ],
- "modified": "2020-04-28 23:07:50.487908",
+ "modified": "2020-04-29 18:40:30.996999",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Block List",

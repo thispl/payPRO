@@ -26,6 +26,8 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
@@ -41,6 +43,8 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -81,18 +85,23 @@
   {
    "fieldname": "log_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Log Type",
    "options": "IN\nOUT"
   },
   {
    "fieldname": "shift",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Shift",
    "options": "Shift Type"
   },
   {
    "fieldname": "time",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
    "label": "Time"
   },
   {
@@ -108,7 +117,7 @@
    "options": "Attendance"
   }
  ],
- "modified": "2020-04-29 00:25:05.856779",
+ "modified": "2020-04-29 18:26:00.959370",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee Checkin",
@@ -130,5 +139,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "employee",
  "track_changes": 1
 }

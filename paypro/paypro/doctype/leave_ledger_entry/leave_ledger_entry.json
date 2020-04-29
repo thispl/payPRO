@@ -22,6 +22,8 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
@@ -33,6 +35,8 @@
   {
    "fieldname": "leave_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Leave Type",
    "options": "Leave Type"
   },
@@ -60,11 +64,13 @@
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "From Date"
   },
   {
    "fieldname": "to_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "To Date"
   },
   {
@@ -95,7 +101,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-28 23:14:40.388872",
+ "modified": "2020-04-29 18:43:39.146566",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Ledger Entry",

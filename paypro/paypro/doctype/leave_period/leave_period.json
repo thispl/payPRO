@@ -9,23 +9,27 @@
   "to_date",
   "is_active",
   "column_break_4",
-  "company"
+  "company",
+  "optional_holiday_list"
  ],
  "fields": [
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "From Date"
   },
   {
    "fieldname": "to_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "To Date"
   },
   {
    "default": "0",
    "fieldname": "is_active",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Is Active"
   },
   {
@@ -37,9 +41,15 @@
    "fieldtype": "Link",
    "label": "Company",
    "options": "Company"
+  },
+  {
+   "fieldname": "optional_holiday_list",
+   "fieldtype": "Link",
+   "label": "Holiday List for Optional Leave",
+   "options": "Holiday List"
   }
  ],
- "modified": "2020-04-03 22:07:56.411272",
+ "modified": "2020-04-29 18:49:51.419444",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Period",

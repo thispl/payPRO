@@ -39,11 +39,14 @@
   {
    "fieldname": "posting_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Posting Date"
   },
   {
    "fieldname": "payroll_frequency",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Payroll Frequency",
    "options": "\nMonthly\nFortnightly\nBimonthly\nWeekly\nDaily"
   },
@@ -161,7 +164,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-24 23:07:49.350458",
+ "modified": "2020-04-29 19:23:20.824511",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Payroll Entry",

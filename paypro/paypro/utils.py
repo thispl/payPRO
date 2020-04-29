@@ -406,13 +406,13 @@ def get_holidays_for_employee(employee, start_date, end_date):
 
 	return holidays
 
-# @erpnext.allow_regional
+# @paypro.allow_regional
 # def calculate_annual_eligible_hra_exemption(doc):
 # 	# Don't delete this method, used for localization
 # 	# Indian HRA Exemption Calculation
 # 	return {}
 
-# @erpnext.allow_regional
+# @paypro.allow_regional
 # def calculate_hra_exemption_for_period(doc):
 # 	# Don't delete this method, used for localization
 # 	# Indian HRA Exemption Calculation

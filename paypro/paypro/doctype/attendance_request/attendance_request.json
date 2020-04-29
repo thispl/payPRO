@@ -24,6 +24,8 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
@@ -35,6 +37,8 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -51,17 +55,20 @@
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "From Date"
   },
   {
    "fieldname": "to_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "To Date"
   },
   {
    "default": "0",
    "fieldname": "half_day",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Half Day"
   },
   {
@@ -99,7 +106,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-28 18:22:08.300749",
+ "modified": "2020-04-29 18:38:39.113990",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Attendance Request",
@@ -120,5 +127,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "employee",
  "track_changes": 1
 }

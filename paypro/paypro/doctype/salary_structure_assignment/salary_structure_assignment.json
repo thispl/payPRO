@@ -23,6 +23,8 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
@@ -34,6 +36,8 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -50,12 +54,15 @@
   {
    "fieldname": "salary_structure",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Salary Structure",
    "options": "Salary Structure"
   },
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "From Date"
   },
   {
@@ -71,6 +78,7 @@
   {
    "fieldname": "base",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Base"
   },
   {
@@ -93,7 +101,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-15 22:56:15.380873",
+ "modified": "2020-04-29 19:19:53.453749",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Salary Structure Assignment",

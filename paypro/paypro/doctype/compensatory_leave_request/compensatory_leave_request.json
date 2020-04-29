@@ -24,6 +24,8 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
@@ -35,6 +37,8 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -45,6 +49,7 @@
   {
    "fieldname": "leave_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Leave Type",
    "options": "Leave Type"
   },
@@ -62,17 +67,20 @@
   {
    "fieldname": "work_from_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Work From Date"
   },
   {
    "fieldname": "work_end_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Work End Date"
   },
   {
    "default": "0",
    "fieldname": "half_day",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Half Day"
   },
   {
@@ -100,7 +108,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-28 18:26:34.066545",
+ "modified": "2020-04-29 18:44:47.678848",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Compensatory Leave Request",
@@ -121,5 +129,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "employee",
  "track_changes": 1
 }

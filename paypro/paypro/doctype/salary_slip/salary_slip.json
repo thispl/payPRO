@@ -68,6 +68,8 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
@@ -79,6 +81,8 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -135,11 +139,13 @@
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Start Date"
   },
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "End Date"
   },
   {
@@ -149,6 +155,7 @@
   {
    "fieldname": "salary_structure",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Salary Structure",
    "options": "Salary Structure"
   },
@@ -339,7 +346,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-16 00:27:37.978539",
+ "modified": "2020-04-29 18:52:59.197041",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Salary Slip",

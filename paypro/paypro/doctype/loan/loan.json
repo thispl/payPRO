@@ -55,6 +55,8 @@
   {
    "fieldname": "applicant_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Applicant Name"
   },
   {
@@ -66,6 +68,8 @@
   {
    "fieldname": "loan_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Loan Type",
    "options": "Loan Type"
   },
@@ -76,6 +80,7 @@
   {
    "fieldname": "posting_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Posting Date"
   },
   {
@@ -104,6 +109,7 @@
   {
    "fieldname": "loan_amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Loan Amount",
    "options": "Company:company:default_currency"
   },
@@ -225,7 +231,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-25 23:24:47.301588",
+ "modified": "2020-04-29 19:27:39.219740",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Loan",

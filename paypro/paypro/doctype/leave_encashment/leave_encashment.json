@@ -29,6 +29,8 @@
   {
    "fieldname": "employee",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee",
    "options": "Employee"
   },
@@ -40,12 +42,16 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
   {
    "fieldname": "leave_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Leave Type",
    "options": "Leave Type"
   },
@@ -62,6 +68,7 @@
   {
    "fieldname": "leave_balance",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "label": "Leave Balance"
   },
   {
@@ -72,16 +79,19 @@
   {
    "fieldname": "encashment_amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Encashment Amount"
   },
   {
    "fieldname": "encashment_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Encashment Date"
   },
   {
    "fieldname": "additional_salary",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Additional Salary",
    "options": "Additional Salary"
   },
@@ -96,7 +106,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-28 23:18:20.900679",
+ "modified": "2020-04-29 18:41:47.609692",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Encashment",

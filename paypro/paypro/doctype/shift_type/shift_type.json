@@ -5,28 +5,34 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1",
   "start_time",
-  "end",
+  "end_time",
   "column_break_4",
   "holiday_list",
-  "enable_auto_attendance"
+  "enable_auto_attendance",
+  "auto_attendance_settings_section",
+  "determine_check_in_and_check_out",
+  "working_hours_calculation_based_on",
+  "begin_check_in_before_shift_start_time",
+  "allow_check_out_after_shift_end_time",
+  "column_break_12",
+  "working_hours_threshold_for_half_day",
+  "working_hours_threshold_for_absent",
+  "process_attendance_after",
+  "last_sync_of_checkin",
+  "grace_period_settings_for_auto_attendance_section",
+  "enable_entry_grace_period",
+  "late_entry_grace_period",
+  "column_break_20",
+  "enable_exit_grace_period",
+  "early_exit_grace_period"
  ],
  "fields": [
   {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
-  {
    "fieldname": "start_time",
    "fieldtype": "Time",
+   "in_list_view": 1,
    "label": "Start Time"
-  },
-  {
-   "fieldname": "end",
-   "fieldtype": "Time",
-   "label": "End"
   },
   {
    "fieldname": "column_break_4",
@@ -43,9 +49,97 @@
    "fieldname": "enable_auto_attendance",
    "fieldtype": "Check",
    "label": "Enable Auto Attendance"
+  },
+  {
+   "fieldname": "auto_attendance_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Auto Attendance Settings"
+  },
+  {
+   "fieldname": "determine_check_in_and_check_out",
+   "fieldtype": "Select",
+   "label": "Determine Check-in and Check-out",
+   "options": "Alternating entries as IN and OUT during the same shift\nStrictly based on Log Type in Employee Checkin"
+  },
+  {
+   "fieldname": "working_hours_calculation_based_on",
+   "fieldtype": "Select",
+   "label": "Working Hours Calculation Based On",
+   "options": "First Check-in and Last Check-out\nEvery Valid Check-in and Check-out"
+  },
+  {
+   "fieldname": "begin_check_in_before_shift_start_time",
+   "fieldtype": "Int",
+   "label": "Begin check-in before shift start time (in minutes)"
+  },
+  {
+   "fieldname": "allow_check_out_after_shift_end_time",
+   "fieldtype": "Int",
+   "label": "Allow check-out after shift end time (in minutes)"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "working_hours_threshold_for_half_day",
+   "fieldtype": "Float",
+   "label": "Working Hours Threshold for Half Day"
+  },
+  {
+   "fieldname": "working_hours_threshold_for_absent",
+   "fieldtype": "Float",
+   "label": "Working Hours Threshold for Absent"
+  },
+  {
+   "fieldname": "process_attendance_after",
+   "fieldtype": "Date",
+   "label": "Process Attendance After"
+  },
+  {
+   "fieldname": "last_sync_of_checkin",
+   "fieldtype": "Datetime",
+   "label": "Last Sync of Checkin"
+  },
+  {
+   "fieldname": "grace_period_settings_for_auto_attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Grace Period Settings For Auto Attendance"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_entry_grace_period",
+   "fieldtype": "Check",
+   "label": "Enable Entry Grace Period"
+  },
+  {
+   "fieldname": "late_entry_grace_period",
+   "fieldtype": "Int",
+   "label": "Late Entry Grace Period"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_exit_grace_period",
+   "fieldtype": "Check",
+   "label": "Enable Exit Grace Period"
+  },
+  {
+   "fieldname": "early_exit_grace_period",
+   "fieldtype": "Int",
+   "label": "Early Exit Grace Period"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "End Time"
   }
  ],
- "modified": "2020-04-17 19:46:43.296044",
+ "modified": "2020-04-29 18:10:05.520453",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Shift Type",
