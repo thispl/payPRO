@@ -1,0 +1,35 @@
+{
+ "creation": "2020-04-30 12:26:49.701605",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bank_transaction_field",
+  "file_field"
+ ],
+ "fields": [
+  {
+   "fieldname": "bank_transaction_field",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Field in Bank Transaction"
+  },
+  {
+   "fieldname": "file_field",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Column in Bank File"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-30 12:26:49.701605",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Bank Transaction Mapping",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

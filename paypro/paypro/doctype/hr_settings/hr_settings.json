@@ -12,6 +12,7 @@
   "expense_approver_mandatory_in_expense_claim",
   "payroll_settings_section",
   "include_holidays_in_total_no_of_working_days",
+  "disable_rounded_total",
   "max_working_hours_against_timesheet",
   "column_break_10",
   "email_salary_slip_to_employee",
@@ -142,13 +143,20 @@
    "label": "Hiring Settings"
   },
   {
+   "default": "0",
    "fieldname": "check_vacancies",
-   "fieldtype": "Data",
+   "fieldtype": "Check",
    "label": "Check Vacancies On Job Offer Creation"
+  },
+  {
+   "default": "0",
+   "fieldname": "disable_rounded_total",
+   "fieldtype": "Check",
+   "label": "Disable Rounded Total"
   }
  ],
  "issingle": 1,
- "modified": "2020-04-11 22:43:02.888782",
+ "modified": "2020-04-30 12:10:59.714839",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "HR Settings",

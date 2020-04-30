@@ -28,7 +28,14 @@
   "column_break_21",
   "deduct_tax_for_unclaimed_employee_benefits",
   "deduct_tax_for_unsubmitted_tax_exemption_proof",
-  "amended_from"
+  "payment_entry_section",
+  "payment_account",
+  "amended_from",
+  "column_break_27",
+  "cost_center",
+  "bank_account",
+  "salary_slips_created",
+  "salary_slips_submitted"
  ],
  "fields": [
   {
@@ -161,10 +168,49 @@
    "fieldtype": "Table",
    "label": "Employee Details",
    "options": "Payroll Employee Detail"
+  },
+  {
+   "fieldname": "payment_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Entry"
+  },
+  {
+   "fieldname": "payment_account",
+   "fieldtype": "Link",
+   "label": "Payment Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Link",
+   "label": "Bank Account",
+   "options": "Bank Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_slips_created",
+   "fieldtype": "Check",
+   "label": "Salary Slips Created"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_slips_submitted",
+   "fieldtype": "Check",
+   "label": "Salary Slips Submitted"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-29 19:23:20.824511",
+ "modified": "2020-04-30 13:07:27.589449",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Payroll Entry",

@@ -1,0 +1,65 @@
+{
+ "autoname": "field:bank_name",
+ "creation": "2020-04-30 12:28:22.853885",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bank_name",
+  "data_import_configuration_section",
+  "bank_transaction_mapping",
+  "section_break_4",
+  "plaid_access_token"
+ ],
+ "fields": [
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "data_import_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Data Import Configuration"
+  },
+  {
+   "fieldname": "bank_transaction_mapping",
+   "fieldtype": "Table",
+   "label": "Bank Transaction Mapping",
+   "options": "Bank Transaction Mapping"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "plaid_access_token",
+   "fieldtype": "Data",
+   "label": "Plaid Access Token"
+  }
+ ],
+ "modified": "2020-04-30 12:28:22.853885",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Bank",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

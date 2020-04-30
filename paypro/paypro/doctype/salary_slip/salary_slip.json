@@ -22,11 +22,11 @@
   "column_break_16",
   "salary_structure",
   "payroll_frequency",
-  "working_days",
+  "total_working_days",
   "leave_without_pay",
   "payment_days",
   "section_break_22",
-  "salary_slip_timesheet",
+  "timesheets",
   "column_break_24",
   "total_working_hours",
   "hour_rate",
@@ -45,7 +45,7 @@
   "column_break_39",
   "total_deduction",
   "loan_repayment_section",
-  "employee_loan",
+  "loans",
   "section_break_43",
   "total_principal_amount",
   "total_interest_amount",
@@ -166,11 +166,6 @@
    "options": "\nMonthly\nFortnightly\nBimonthly\nWeekly\nDaily"
   },
   {
-   "fieldname": "working_days",
-   "fieldtype": "Float",
-   "label": "Working Days"
-  },
-  {
    "fieldname": "leave_without_pay",
    "fieldtype": "Float",
    "label": "Leave Without Pay"
@@ -183,12 +178,6 @@
   {
    "fieldname": "section_break_22",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "salary_slip_timesheet",
-   "fieldtype": "Table",
-   "label": "Salary Slip Timesheet",
-   "options": "Salary Slip Timesheet"
   },
   {
    "fieldname": "column_break_24",
@@ -279,12 +268,6 @@
    "label": "Loan repayment"
   },
   {
-   "fieldname": "employee_loan",
-   "fieldtype": "Table",
-   "label": "Employee Loan",
-   "options": "Salary Slip Loan"
-  },
-  {
    "fieldname": "section_break_43",
    "fieldtype": "Section Break"
   },
@@ -343,10 +326,27 @@
    "options": "Salary Slip",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "total_working_days",
+   "fieldtype": "Data",
+   "label": "Working Days"
+  },
+  {
+   "fieldname": "timesheets",
+   "fieldtype": "Table",
+   "label": "Salary Slip Timesheet",
+   "options": "Salary Slip Timesheet"
+  },
+  {
+   "fieldname": "loans",
+   "fieldtype": "Table",
+   "label": "Employee Loan",
+   "options": "Salary Slip Loan"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-29 18:52:59.197041",
+ "modified": "2020-04-30 13:02:06.180970",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Salary Slip",

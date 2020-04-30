@@ -1,0 +1,211 @@
+{
+ "creation": "2020-04-30 12:45:13.731282",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account_name",
+  "company_account",
+  "bank",
+  "account_type",
+  "account_subtype",
+  "column_break_6",
+  "is_default",
+  "is_company_account",
+  "company",
+  "party_details_section",
+  "party_type",
+  "column_break_12",
+  "party",
+  "account_details_section",
+  "iban",
+  "column_break_16",
+  "bank_account_no",
+  "branch_code",
+  "swift_number",
+  "address_and_contact_section",
+  "address_html",
+  "website",
+  "column_break_23",
+  "contact_html",
+  "integration_details_section",
+  "integration_id",
+  "last_integration_date",
+  "column_break_28",
+  "mask"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name"
+  },
+  {
+   "fieldname": "company_account",
+   "fieldtype": "Link",
+   "label": "Company Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "label": "Bank",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Link",
+   "label": "Account Type",
+   "options": "Account Type"
+  },
+  {
+   "fieldname": "account_subtype",
+   "fieldtype": "Link",
+   "label": "Account Subtype",
+   "options": "Account Subtype"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is the Default Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_company_account",
+   "fieldtype": "Check",
+   "label": "Is Company Account"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "party_details_section",
+   "fieldtype": "Section Break",
+   "label": "Party Details"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "label": "Party Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "Party",
+   "options": "party_type"
+  },
+  {
+   "fieldname": "account_details_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details"
+  },
+  {
+   "fieldname": "iban",
+   "fieldtype": "Data",
+   "label": "IBAN"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_account_no",
+   "fieldtype": "Data",
+   "label": "Bank Account No"
+  },
+  {
+   "fieldname": "branch_code",
+   "fieldtype": "Data",
+   "label": "Branch Code"
+  },
+  {
+   "fieldname": "swift_number",
+   "fieldtype": "Data",
+   "label": "SWIFT number"
+  },
+  {
+   "fieldname": "address_and_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact",
+   "options": "fa fa-map-marker"
+  },
+  {
+   "fieldname": "address_html",
+   "fieldtype": "HTML",
+   "label": "Address HTML"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML"
+  },
+  {
+   "fieldname": "integration_details_section",
+   "fieldtype": "Section Break",
+   "label": "Integration Details"
+  },
+  {
+   "fieldname": "integration_id",
+   "fieldtype": "Data",
+   "label": "Integration ID"
+  },
+  {
+   "fieldname": "last_integration_date",
+   "fieldtype": "Date",
+   "label": "Last Integration Date"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mask",
+   "fieldtype": "Data",
+   "label": "Mask"
+  }
+ ],
+ "modified": "2020-04-30 12:45:13.731282",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Bank Account",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

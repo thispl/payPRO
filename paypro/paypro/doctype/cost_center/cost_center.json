@@ -1,0 +1,101 @@
+{
+ "creation": "2020-04-30 13:04:49.921116",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "cost_center_name",
+  "cost_center_number",
+  "parent_cost_center",
+  "company",
+  "column_break_5",
+  "is_group",
+  "disabled",
+  "lft",
+  "rgt",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cost_center_name",
+   "fieldtype": "Data",
+   "label": "Cost Center Name"
+  },
+  {
+   "fieldname": "cost_center_number",
+   "fieldtype": "Data",
+   "label": "Cost Center Number"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "label": "lft"
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "label": "rgt"
+  },
+  {
+   "fieldname": "parent_cost_center",
+   "fieldtype": "Link",
+   "label": "Parent Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "old_parent",
+   "options": "Cost Center"
+  }
+ ],
+ "modified": "2020-04-30 13:05:37.554605",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Cost Center",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
