@@ -2,6 +2,10 @@
 // For license information, please see license.txt
 
 cur_frm.add_fetch('employee', 'company', 'company');
+cur_frm.add_fetch('employee', 'employee_name', 'employee_name');
+cur_frm.add_fetch('employee', 'department', 'department');
+cur_frm.add_fetch('employee', 'designation', 'designation');
+cur_frm.add_fetch('employee', 'branch', 'branch');
 cur_frm.add_fetch('time_sheet', 'total_hours', 'working_hours');
 
 frappe.ui.form.on("Salary Slip", {
@@ -13,7 +17,7 @@ frappe.ui.form.on("Salary Slip", {
 			];
 		});
 
-		frm.fields_dict["salary_slip_timesheet"].grid.get_field("time_sheet").get_query = function(){
+		frm.fields_dict["timesheets"].grid.get_field("time_sheet").get_query = function(){
 			return {
 				filters: {
 					employee: frm.doc.employee

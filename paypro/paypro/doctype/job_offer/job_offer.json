@@ -1,0 +1,136 @@
+{
+ "autoname": "HR-OFF-.YYYY.-.#####",
+ "creation": "2020-05-01 22:30:35.020045",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_applicant",
+  "applicant_name",
+  "column_break_3",
+  "status",
+  "offer_date",
+  "designation",
+  "company",
+  "section_break_8",
+  "offer_terms",
+  "section_break_10",
+  "terms",
+  "printing_details_section",
+  "letter_head",
+  "column_break_14",
+  "select_print_heading",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_applicant",
+   "fieldtype": "Link",
+   "label": "Job Applicant",
+   "options": "Job Applicant"
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Awaiting Response\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "offer_date",
+   "fieldtype": "Date",
+   "label": "Offer Date"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "offer_terms",
+   "fieldtype": "Table",
+   "label": "Job Offer Terms",
+   "options": "Job Offer Term"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "printing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Printing Details"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_print_heading",
+   "fieldtype": "Link",
+   "label": "Print Heading",
+   "options": "Print Heading"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job Offer",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-01 22:30:35.020045",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Job Offer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -31,29 +31,6 @@ def get_data():
 				},               
             ]
         },
-		{
-			"label": _("Shift Management"),
-			"items": [                
-                {
-					"type": "doctype",
-					"name": "Shift Type",
-					"description": _("paypro"),
-					"onboard": 1,
-				},
-				{
-					"type": "doctype",
-					"name": "Shift Request",
-					"description": _("paypro"),
-					"onboard": 1,
-				},
-				{
-					"type": "doctype",
-					"name": "Shift Assignment",
-					"description": _("paypro"),
-					"onboard": 1,
-				},               
-            ]
-        },
         {
 			"label": _("Attendance"),
 			"items": [
@@ -168,7 +145,36 @@ def get_data():
 					"name": "Salary Component",
 					"description": _("paypro"),
 					"onboard": 1,
-				},           
+				},
+				{
+					"type": "doctype",
+					"name": "Retention Bonus",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Incentive",
+					"description": _("paypro"),
+					"onboard": 1,
+				},          
+            ]
+        },
+		{
+			"label": _("Employee Benefit"),
+			"items": [                
+                {
+					"type": "doctype",
+					"name": "Employee Benefit Application",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Benefit Claim",
+					"description": _("paypro"),
+					"onboard": 1,
+				},               
             ]
         },
         {
@@ -186,6 +192,35 @@ def get_data():
 					"description": _("paypro"),
 					"onboard": 1,
 				},                
+            ]
+        },
+		{
+			"label": _("Recruitment"),
+			"items": [
+                {
+					"type": "doctype",
+					"name": "Job Opening",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+                {
+					"type": "doctype",
+					"name": "Job Applicant",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Job Offer",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Staffing Plan",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
             ]
         },
         {
@@ -209,6 +244,29 @@ def get_data():
 					"description": _("paypro"),
 					"onboard": 1,
 				},
+            ]
+        },
+		{
+			"label": _("Shift Management"),
+			"items": [                
+                {
+					"type": "doctype",
+					"name": "Shift Type",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Shift Request",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Shift Assignment",
+					"description": _("paypro"),
+					"onboard": 1,
+				},               
             ]
         },
         {

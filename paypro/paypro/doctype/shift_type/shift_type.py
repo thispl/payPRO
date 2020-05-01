@@ -17,7 +17,13 @@ from paypro.paypro.doctype.employee.employee import get_holiday_list_for_employe
 class ShiftType(Document):
 	def process_auto_attendance(self):
 		if not cint(self.enable_auto_attendance) or not self.process_attendance_after or not self.last_sync_of_checkin:
+			frappe.errprint(self.enable_auto_attendance) 
+			frappe.errprint(self.process_attendance_after)
+			frappe.errprint(self.last_sync_of_checkin)
 			return
+		frappe.errprint(self.enable_auto_attendance) 
+		frappe.errprint(self.process_attendance_after)
+		frappe.errprint(self.last_sync_of_checkin)
 		filters = {
 			'skip_auto_attendance':'0',
 			'attendance':('is', 'not set'),
@@ -25,7 +31,9 @@ class ShiftType(Document):
 			'shift_actual_end': ('<', self.last_sync_of_checkin),
 			'shift': self.name
 		}
+		frappe.errprint(filters)
 		logs = frappe.db.get_list('Employee Checkin', fields="*", filters=filters, order_by="employee,time")
+		frappe.errprint(logs)
 		for key, group in itertools.groupby(logs, key=lambda x: (x['employee'], x['shift_actual_start'])):
 			single_shift_logs = list(group)
 			attendance_status, working_hours, late_entry, early_exit = self.get_attendance(single_shift_logs)

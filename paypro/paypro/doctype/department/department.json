@@ -15,7 +15,10 @@
   "section_break_8",
   "leave_approver",
   "section_break_10",
-  "expense_approver"
+  "expense_approver",
+  "lft",
+  "rgt",
+  "old_parent"
  ],
  "fields": [
   {
@@ -77,9 +80,24 @@
    "fieldtype": "Table",
    "label": "Expense Approver",
    "options": "Department Approver"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "label": "lft"
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "label": "rgt"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Data",
+   "label": "Old Parent"
   }
  ],
- "modified": "2020-04-28 23:40:40.041373",
+ "modified": "2020-04-30 20:15:20.787772",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Department",

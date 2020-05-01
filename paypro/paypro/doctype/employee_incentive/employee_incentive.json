@@ -1,0 +1,104 @@
+{
+ "autoname": "HR-EINV-.YY.-.MM.-.#####",
+ "creation": "2020-05-01 21:26:12.393149",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "incentive_amount",
+  "payroll_date",
+  "salary_component",
+  "column_break_5",
+  "employee_name",
+  "department",
+  "additional_salary",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "incentive_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Incentive Amount"
+  },
+  {
+   "fieldname": "payroll_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payroll Date"
+  },
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "additional_salary",
+   "fieldtype": "Link",
+   "label": "Additional Salary",
+   "options": "Additional Salary"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Incentive",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-01 21:26:12.393149",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Incentive",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,135 @@
+{
+ "autoname": "HR-BEN-CLM-.YY.-.MM.-.#####",
+ "creation": "2020-05-01 21:17:53.381490",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "department",
+  "column_break_4",
+  "claim_date",
+  "benefit_type_and_amount_section",
+  "earning_component",
+  "max_amount_eligible",
+  "pay_against_benefit_claim",
+  "claimed_amount",
+  "salary_slip",
+  "expense_proof_section",
+  "attachments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "claim_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Claim Date"
+  },
+  {
+   "fieldname": "benefit_type_and_amount_section",
+   "fieldtype": "Section Break",
+   "label": "Benefit Type and Amount"
+  },
+  {
+   "fieldname": "earning_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Claim Benefit For",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "max_amount_eligible",
+   "fieldtype": "Currency",
+   "label": "Max Amount Eligible"
+  },
+  {
+   "default": "0",
+   "fieldname": "pay_against_benefit_claim",
+   "fieldtype": "Check",
+   "label": "Pay Against Benefit Claim"
+  },
+  {
+   "fieldname": "claimed_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Claimed Amount"
+  },
+  {
+   "fieldname": "salary_slip",
+   "fieldtype": "Link",
+   "label": "Salary Slip",
+   "options": "Salary Slip"
+  },
+  {
+   "fieldname": "expense_proof_section",
+   "fieldtype": "Section Break",
+   "label": "Expense Proof"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Benefit Claim",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-01 21:18:36.618118",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Benefit Claim",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

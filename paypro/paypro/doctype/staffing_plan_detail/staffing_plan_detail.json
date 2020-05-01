@@ -1,0 +1,75 @@
+{
+ "creation": "2020-05-01 21:33:37.379818",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "designation",
+  "vacancies",
+  "estimated_cost_per_position",
+  "total_estimated_cost",
+  "column_break_5",
+  "current_count",
+  "current_openings",
+  "number_of_positions"
+ ],
+ "fields": [
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "vacancies",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Vacancies"
+  },
+  {
+   "fieldname": "estimated_cost_per_position",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost Per Position"
+  },
+  {
+   "fieldname": "total_estimated_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Estimated Cost"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Current Count"
+  },
+  {
+   "fieldname": "current_openings",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Current Openings"
+  },
+  {
+   "fieldname": "number_of_positions",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number Of Positions"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-01 21:33:37.379818",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Staffing Plan Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

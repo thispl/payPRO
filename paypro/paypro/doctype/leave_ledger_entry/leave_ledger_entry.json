@@ -15,7 +15,7 @@
   "to_date",
   "is_carry_forward",
   "is_expired",
-  "is_leave_without_pay",
+  "is_lwp",
   "amended_from"
  ],
  "fields": [
@@ -86,11 +86,6 @@
    "label": "Is Expired"
   },
   {
-   "fieldname": "is_leave_without_pay",
-   "fieldtype": "Data",
-   "label": "Is Leave Without Pay"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -98,10 +93,16 @@
    "options": "Leave Ledger Entry",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_lwp",
+   "fieldtype": "Check",
+   "label": "Is Leave Without Pay"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-29 18:43:39.146566",
+ "modified": "2020-05-01 11:13:36.268674",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Ledger Entry",

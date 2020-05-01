@@ -8,7 +8,7 @@ from frappe.utils import now, cint, get_datetime
 from frappe.model.document import Document
 from frappe import _
 
-from erpnext.hr.doctype.shift_assignment.shift_assignment import get_actual_start_end_datetime_of_shift
+from paypro.paypro.doctype.shift_assignment.shift_assignment import get_actual_start_end_datetime_of_shift
 
 class EmployeeCheckin(Document):
 	def validate(self):

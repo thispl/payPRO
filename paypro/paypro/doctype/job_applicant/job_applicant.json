@@ -1,0 +1,95 @@
+{
+ "autoname": "HR-APP-.YYYY.-.#####",
+ "creation": "2020-05-01 21:47:39.552496",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "applicant_name",
+  "email_id",
+  "status",
+  "column_break_4",
+  "job_opening",
+  "source",
+  "source_name",
+  "section_break_8",
+  "cover_letter",
+  "resume_attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nReplied\nRejected\nHold\nAccepted"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_opening",
+   "fieldtype": "Link",
+   "label": "Job Opening",
+   "options": "Job Opening"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "Job Applicant Source"
+  },
+  {
+   "fieldname": "source_name",
+   "fieldtype": "Link",
+   "label": "Source Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cover_letter",
+   "fieldtype": "Text",
+   "label": "Cover Letter"
+  },
+  {
+   "fieldname": "resume_attachment",
+   "fieldtype": "Attach",
+   "label": "Resume Attachment"
+  }
+ ],
+ "modified": "2020-05-01 21:47:39.552496",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Job Applicant",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

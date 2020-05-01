@@ -1,0 +1,51 @@
+{
+ "creation": "2020-05-01 21:10:34.375159",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "earning_component",
+  "pay_against_benefit_claim",
+  "max_benefit_amount",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "earning_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Earning Component",
+   "options": "Salary Component"
+  },
+  {
+   "default": "0",
+   "fieldname": "pay_against_benefit_claim",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Pay Against Benefit Claim"
+  },
+  {
+   "fieldname": "max_benefit_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Max Benefit Amount"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-01 21:10:34.375159",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Benefit Application Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

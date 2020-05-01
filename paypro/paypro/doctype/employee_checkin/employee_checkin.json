@@ -20,7 +20,12 @@
   "column_break_11",
   "log_date",
   "log_time",
-  "attendance"
+  "attendance",
+  "section_break_17",
+  "shift_start",
+  "shift_end",
+  "shift_actual_start",
+  "shift_actual_end"
  ],
  "fields": [
   {
@@ -115,9 +120,33 @@
    "fieldtype": "Link",
    "label": "Attendance Marked",
    "options": "Attendance"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shift_start",
+   "fieldtype": "Datetime",
+   "label": "Shift Start"
+  },
+  {
+   "fieldname": "shift_end",
+   "fieldtype": "Datetime",
+   "label": "Shift End"
+  },
+  {
+   "fieldname": "shift_actual_start",
+   "fieldtype": "Datetime",
+   "label": "Shift Actual Start"
+  },
+  {
+   "fieldname": "shift_actual_end",
+   "fieldtype": "Datetime",
+   "label": "Shift Actual End"
   }
  ],
- "modified": "2020-04-29 18:26:00.959370",
+ "modified": "2020-05-01 11:44:50.570147",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee Checkin",

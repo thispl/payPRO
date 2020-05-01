@@ -16,8 +16,8 @@ from paypro.paypro.doctype.utilities.transaction_base import TransactionBase
 from frappe.utils.background_jobs import enqueue
 from paypro.paypro.doctype.additional_salary.additional_salary import get_additional_salary_component
 from paypro.paypro.doctype.payroll_period.payroll_period import get_period_factor, get_payroll_period
-# from erpnext.hr.doctype.employee_benefit_application.employee_benefit_application import get_benefit_component_amount
-# from erpnext.hr.doctype.employee_benefit_claim.employee_benefit_claim import get_benefit_claim_amount, get_last_payroll_period_benefits
+from paypro.paypro.doctype.employee_benefit_application.employee_benefit_application import get_benefit_component_amount
+from paypro.paypro.doctype.employee_benefit_claim.employee_benefit_claim import get_benefit_claim_amount, get_last_payroll_period_benefits
 # from erpnext.loan_management.doctype.loan_repayment.loan_repayment import calculate_amounts, create_repayment_entry
 
 class SalarySlip(TransactionBase):
@@ -177,7 +177,7 @@ class SalarySlip(TransactionBase):
 				.format(self.employee), title=_('Salary Structure Missing'))
 
 	def pull_sal_struct(self):
-		from erpnext.hr.doctype.salary_structure.salary_structure import make_salary_slip
+		from paypro.paypro.doctype.salary_structure.salary_structure import make_salary_slip
 
 		if self.salary_slip_based_on_timesheet:
 			self.salary_structure = self._salary_structure_doc.name

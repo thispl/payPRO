@@ -93,7 +93,7 @@
   },
   {
    "fieldname": "process_attendance_after",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "label": "Process Attendance After"
   },
   {
@@ -139,7 +139,7 @@
    "label": "End Time"
   }
  ],
- "modified": "2020-04-29 18:10:05.520453",
+ "modified": "2020-05-01 20:17:32.174465",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Shift Type",
