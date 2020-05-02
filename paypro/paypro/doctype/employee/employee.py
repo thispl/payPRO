@@ -11,9 +11,9 @@ from frappe import throw, _, scrub
 from frappe.permissions import add_user_permission, remove_user_permission, \
 	set_user_permission_if_allowed, has_permission
 from frappe.model.document import Document
-from erpnext.utilities.transaction_base import delete_events
+from paypro.paypro.doctype.utilities.transaction_base import delete_events
 from frappe.utils.nestedset import NestedSet
-# from erpnext.hr.doctype.job_offer.job_offer import get_staffing_plan_detail
+from paypro.paypro.doctype.job_offer.job_offer import get_staffing_plan_detail
 
 class EmployeeUserDisabledError(frappe.ValidationError): pass
 class EmployeeLeftValidationError(frappe.ValidationError): pass
@@ -47,8 +47,8 @@ class Employee(NestedSet):
 		self.validate_status()
 		self.validate_reports_to()
 		self.validate_preferred_email()
-		# if self.job_applicant:
-		# 	self.validate_onboarding_process()
+		if self.job_applicant:
+			self.validate_onboarding_process()
 
 		if self.user_id:
 			self.validate_user_details()

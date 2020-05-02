@@ -1,0 +1,36 @@
+{
+ "creation": "2020-05-02 21:43:48.025235",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "leave_type",
+  "annual_allocation"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Leave Type",
+   "options": "Leave Type"
+  },
+  {
+   "fieldname": "annual_allocation",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Annual Allocation"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-02 21:43:48.025235",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Leave Policy Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

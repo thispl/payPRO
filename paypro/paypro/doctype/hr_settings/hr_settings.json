@@ -26,7 +26,10 @@
   "show_leaves_of_all_department_members_in_calendar",
   "auto_leave_encashment",
   "hiring_settings_section",
-  "check_vacancies"
+  "check_vacancies",
+  "section_break_24",
+  "restrict_backdated_leave_application",
+  "role_allowed_to_create_backdated_leave_application"
  ],
  "fields": [
   {
@@ -153,10 +156,26 @@
    "fieldname": "disable_rounded_total",
    "fieldtype": "Check",
    "label": "Disable Rounded Total"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "restrict_backdated_leave_application",
+   "fieldtype": "Check",
+   "label": "Restrict Backdated Leave Application"
+  },
+  {
+   "fieldname": "role_allowed_to_create_backdated_leave_application",
+   "fieldtype": "Link",
+   "label": "Role Allowed to Create Backdated Leave Application",
+   "options": "Role"
   }
  ],
  "issingle": 1,
- "modified": "2020-04-30 12:10:59.714839",
+ "modified": "2020-05-02 21:37:40.574782",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "HR Settings",

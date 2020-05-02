@@ -1,0 +1,57 @@
+{
+ "autoname": "HR-LPOL-.YYYY.-.#####",
+ "creation": "2020-05-02 21:46:03.734606",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "leave_allocations_section",
+  "leave_policy_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave_allocations_section",
+   "fieldtype": "Section Break",
+   "label": "Leave Allocations"
+  },
+  {
+   "fieldname": "leave_policy_details",
+   "fieldtype": "Table",
+   "label": "Leave Policy Details",
+   "options": "Leave Policy Detail"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Leave Policy",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-02 21:46:03.734606",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Leave Policy",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

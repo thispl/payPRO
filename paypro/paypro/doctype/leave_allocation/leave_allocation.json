@@ -18,7 +18,16 @@
   "carry_forward",
   "unused_leaves",
   "total_leaves_allocated",
-  "amended_from"
+  "total_leaves_encashed",
+  "column_break_15",
+  "compensatory_leave_request",
+  "leave_period",
+  "leave_policy",
+  "carry_forwarded_leaves",
+  "expired",
+  "amended_from",
+  "notes_section",
+  "description"
  ],
  "fields": [
   {
@@ -106,10 +115,58 @@
    "options": "Leave Allocation",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "total_leaves_encashed",
+   "fieldtype": "Float",
+   "label": "Total Leaves Encashed"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "compensatory_leave_request",
+   "fieldtype": "Link",
+   "label": "Compensatory Leave Request",
+   "options": "Compensatory Leave Request"
+  },
+  {
+   "fieldname": "leave_period",
+   "fieldtype": "Link",
+   "label": "Leave Period",
+   "options": "Leave Period"
+  },
+  {
+   "fieldname": "leave_policy",
+   "fieldtype": "Link",
+   "label": "Leave Policy",
+   "options": "Leave Policy"
+  },
+  {
+   "fieldname": "carry_forwarded_leaves",
+   "fieldtype": "Float",
+   "label": "Carry Forwarded Leaves"
+  },
+  {
+   "default": "0",
+   "fieldname": "expired",
+   "fieldtype": "Check",
+   "label": "Expired"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-29 18:48:03.565977",
+ "modified": "2020-05-02 21:58:26.186187",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Allocation",

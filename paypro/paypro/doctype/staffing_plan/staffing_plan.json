@@ -11,7 +11,7 @@
   "from_date",
   "to_date",
   "section_break_6",
-  "staffing_plan_detail",
+  "staffing_details",
   "section_break_8",
   "total_estimated_budget",
   "amended_from"
@@ -48,12 +48,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "staffing_plan_detail",
-   "fieldtype": "Link",
-   "label": "Staffing Plan Detail",
-   "options": "Staffing Plan Detail"
-  },
-  {
    "fieldname": "section_break_8",
    "fieldtype": "Section Break"
   },
@@ -70,10 +64,16 @@
    "options": "Staffing Plan",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "staffing_details",
+   "fieldtype": "Table",
+   "label": "Staffing Plan Detail",
+   "options": "Staffing Plan Detail"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-05-01 21:35:51.604539",
+ "modified": "2020-05-01 23:25:17.541475",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Staffing Plan",

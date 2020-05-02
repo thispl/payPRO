@@ -6,20 +6,32 @@
  "engine": "InnoDB",
  "field_order": [
   "basic_information_section",
+  "employee",
   "naming_series",
   "first_name",
   "middle_name",
   "last_name",
   "employee_name",
+  "image",
   "column_break_6",
   "company",
   "status",
   "employee_number",
+  "employment_type",
   "gender",
   "date_of_birth",
   "date_of_joining",
   "user_section",
   "user_id",
+  "create_user",
+  "joining_details_section",
+  "job_applicant",
+  "scheduled_confirmation_date",
+  "final_confirmation_date",
+  "column_break_24",
+  "contract_end_date",
+  "notice_number_of_days",
+  "date_of_retirement",
   "department_and_grade_section",
   "department",
   "designation",
@@ -57,12 +69,26 @@
   "column_break_48",
   "marital_status",
   "blood_group",
+  "educational_qualification_section",
+  "education",
+  "previous_work_experience_section",
+  "external_work_history",
+  "history_in_company_section",
+  "internal_work_history",
   "exit_section",
   "resignation_letter_date",
   "relieving_date",
-  "column_break_56",
   "reason_for_leaving",
-  "date_of_retirement"
+  "leave_encashed",
+  "encashment_date",
+  "column_break_56",
+  "held_on",
+  "reason_for_resignation",
+  "new_workplace",
+  "feedback",
+  "lft",
+  "rgt",
+  "old_parent"
  ],
  "fields": [
   {
@@ -369,7 +395,8 @@
   },
   {
    "fieldname": "column_break_56",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "label": "Exit Interview Details"
   },
   {
    "fieldname": "employee_name",
@@ -378,9 +405,144 @@
    "in_standard_filter": 1,
    "label": "Full Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Data",
+   "label": "Employee"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type"
+  },
+  {
+   "fieldname": "create_user",
+   "fieldtype": "Button",
+   "label": "Create User"
+  },
+  {
+   "fieldname": "joining_details_section",
+   "fieldtype": "Section Break",
+   "label": "Joining Details"
+  },
+  {
+   "fieldname": "job_applicant",
+   "fieldtype": "Link",
+   "label": "Job Applicant",
+   "options": "Job Applicant"
+  },
+  {
+   "fieldname": "scheduled_confirmation_date",
+   "fieldtype": "Date",
+   "label": "Offer Date"
+  },
+  {
+   "fieldname": "final_confirmation_date",
+   "fieldtype": "Date",
+   "label": "Confirmation Date"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "notice_number_of_days",
+   "fieldtype": "Int",
+   "label": "Notice (days)"
+  },
+  {
+   "fieldname": "educational_qualification_section",
+   "fieldtype": "Section Break",
+   "label": "Educational Qualification"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Table",
+   "label": "Education",
+   "options": "Employee Education"
+  },
+  {
+   "fieldname": "previous_work_experience_section",
+   "fieldtype": "Section Break",
+   "label": "Previous Work Experience"
+  },
+  {
+   "fieldname": "external_work_history",
+   "fieldtype": "Table",
+   "label": "External Work History",
+   "options": "Employee External Work History"
+  },
+  {
+   "fieldname": "history_in_company_section",
+   "fieldtype": "Section Break",
+   "label": "History In Company"
+  },
+  {
+   "fieldname": "internal_work_history",
+   "fieldtype": "Table",
+   "label": "Internal Work History",
+   "options": "Employee Internal Work History"
+  },
+  {
+   "fieldname": "leave_encashed",
+   "fieldtype": "Select",
+   "label": "Leave Encashed?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "encashment_date",
+   "fieldtype": "Date",
+   "label": "Encashment Date"
+  },
+  {
+   "fieldname": "held_on",
+   "fieldtype": "Date",
+   "label": "Held On"
+  },
+  {
+   "fieldname": "reason_for_resignation",
+   "fieldtype": "Data",
+   "label": "Reason for Resignation"
+  },
+  {
+   "fieldname": "new_workplace",
+   "fieldtype": "Data",
+   "label": "New Workplace"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Small Text",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "label": "lft"
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "label": "rgt"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Data",
+   "label": "Old Parent"
   }
  ],
- "modified": "2020-04-22 16:31:08.857874",
+ "modified": "2020-05-02 11:04:31.051897",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee",

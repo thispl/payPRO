@@ -28,8 +28,11 @@
   "salary_slip",
   "section_break_19",
   "posting_date",
+  "follow_via_email",
+  "color",
   "column_break_21",
   "company",
+  "letter_head",
   "amended_from"
  ],
  "fields": [
@@ -65,6 +68,7 @@
    "options": "Leave Type"
   },
   {
+   "fetch_from": "employee.department",
    "fieldname": "department",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -177,10 +181,27 @@
    "fieldtype": "Link",
    "label": "Salary Slip",
    "options": "Salary Slip"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_via_email",
+   "fieldtype": "Check",
+   "label": "Follow via Email"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-29 18:46:16.667486",
+ "modified": "2020-05-02 22:16:24.490183",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Application",

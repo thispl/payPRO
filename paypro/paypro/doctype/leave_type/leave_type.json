@@ -8,14 +8,25 @@
   "leave_type_name",
   "max_leaves_allowed",
   "applicable_after",
-  "maximum_continuous_days_applicable",
+  "max_continuous_days_allowed",
   "column_break_5",
   "is_carry_forward",
   "is_lwp",
   "is_optional_leave",
   "allow_negative",
   "include_holiday",
-  "is_compensatory"
+  "is_compensatory",
+  "carry_forward_section",
+  "maximum_carry_forwarded_leaves",
+  "expire_carry_forwarded_leaves_after_days",
+  "encashment_section",
+  "allow_encashment",
+  "encashment_threshold_days",
+  "earning_component",
+  "earned_leave_section",
+  "is_earned_leave",
+  "earned_leave_frequency",
+  "rounding"
  ],
  "fields": [
   {
@@ -36,11 +47,6 @@
    "fieldname": "applicable_after",
    "fieldtype": "Int",
    "label": "Applicable After"
-  },
-  {
-   "fieldname": "maximum_continuous_days_applicable",
-   "fieldtype": "Int",
-   "label": "Maximum Continuous Days Applicable"
   },
   {
    "fieldname": "column_break_5",
@@ -84,9 +90,74 @@
    "fieldtype": "Check",
    "in_list_view": 1,
    "label": "Include holidays within leaves as leaves"
+  },
+  {
+   "fieldname": "max_continuous_days_allowed",
+   "fieldtype": "Int",
+   "label": "Maximum Continuous Days Applicable"
+  },
+  {
+   "fieldname": "carry_forward_section",
+   "fieldtype": "Section Break",
+   "label": "Carry Forward"
+  },
+  {
+   "fieldname": "maximum_carry_forwarded_leaves",
+   "fieldtype": "Float",
+   "label": "Maximum Carry Forwarded Leaves"
+  },
+  {
+   "fieldname": "expire_carry_forwarded_leaves_after_days",
+   "fieldtype": "Int",
+   "label": "Expire Carry Forwarded Leaves (Days)"
+  },
+  {
+   "fieldname": "encashment_section",
+   "fieldtype": "Section Break",
+   "label": "Encashment"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_encashment",
+   "fieldtype": "Check",
+   "label": "Allow Encashment"
+  },
+  {
+   "fieldname": "encashment_threshold_days",
+   "fieldtype": "Int",
+   "label": "Encashment Threshold Days"
+  },
+  {
+   "fieldname": "earning_component",
+   "fieldtype": "Link",
+   "label": "Earning Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "earned_leave_section",
+   "fieldtype": "Section Break",
+   "label": "Earned Leave"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_earned_leave",
+   "fieldtype": "Check",
+   "label": "Is Earned Leave"
+  },
+  {
+   "fieldname": "earned_leave_frequency",
+   "fieldtype": "Select",
+   "label": "Earned Leave Frequency",
+   "options": "Monthly\nQuarterly\nHalf-Yearly\nYearly"
+  },
+  {
+   "fieldname": "rounding",
+   "fieldtype": "Select",
+   "label": "Rounding",
+   "options": "0.5\n1.0"
   }
  ],
- "modified": "2020-04-29 18:47:25.443180",
+ "modified": "2020-05-02 22:11:46.304012",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Leave Type",

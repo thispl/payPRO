@@ -11,6 +11,6 @@ cur_frm.cscript.onload = function(doc, cdt, cdn) {
 
 cur_frm.fields_dict.employee.get_query = function(doc,cdt,cdn) {
 	return{
-		// query: "erpnext.controllers.queries.employee_query"
+		query: "paypro.paypro.doctype.controllers.queries.employee_query"
 	}	
 }
