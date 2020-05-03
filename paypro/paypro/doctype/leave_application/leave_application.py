@@ -10,7 +10,7 @@ from frappe.utils import cint, cstr, date_diff, flt, formatdate, getdate, get_li
 from paypro.paypro.utils import set_employee_name, get_leave_period
 from paypro.paypro.doctype.leave_block_list.leave_block_list import get_applicable_block_dates
 from paypro.paypro.doctype.employee.employee import get_holiday_list_for_employee
-# from erpnext.buying.doctype.supplier_scorecard.supplier_scorecard import daterange
+from paypro.custom import daterange
 from paypro.paypro.doctype.leave_ledger_entry.leave_ledger_entry import create_leave_ledger_entry
 
 class LeaveDayBlockedError(frappe.ValidationError): pass

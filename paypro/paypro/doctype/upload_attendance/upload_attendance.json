@@ -1,0 +1,73 @@
+{
+ "creation": "2020-05-03 22:41:36.448956",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "download_template_section",
+  "att_fr_date",
+  "att_to_date",
+  "get_template",
+  "import_attendance_section",
+  "upload_html",
+  "import_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "download_template_section",
+   "fieldtype": "Section Break",
+   "label": "Download Template"
+  },
+  {
+   "fieldname": "att_fr_date",
+   "fieldtype": "Date",
+   "label": "Attendance From Date"
+  },
+  {
+   "fieldname": "att_to_date",
+   "fieldtype": "Date",
+   "label": "Attendance To Date"
+  },
+  {
+   "fieldname": "get_template",
+   "fieldtype": "Button",
+   "label": "Get Template"
+  },
+  {
+   "fieldname": "import_attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Import Attendance"
+  },
+  {
+   "fieldname": "upload_html",
+   "fieldtype": "HTML",
+   "label": "Upload HTML"
+  },
+  {
+   "fieldname": "import_log",
+   "fieldtype": "HTML",
+   "label": "Import Log"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2020-05-03 22:41:36.448956",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Upload Attendance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

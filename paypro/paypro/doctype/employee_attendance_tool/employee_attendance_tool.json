@@ -1,0 +1,87 @@
+{
+ "creation": "2020-05-03 22:43:50.700840",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "department",
+  "column_break_3",
+  "branch",
+  "company",
+  "unmarked_attendance_section",
+  "employees_html",
+  "marked_attendance_section",
+  "marked_attendance_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "unmarked_attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Unmarked Attendance"
+  },
+  {
+   "fieldname": "employees_html",
+   "fieldtype": "HTML",
+   "label": "Employees HTML"
+  },
+  {
+   "fieldname": "marked_attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Marked Attendance"
+  },
+  {
+   "fieldname": "marked_attendance_html",
+   "fieldtype": "HTML",
+   "label": "Marked Attendance HTML"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2020-05-03 22:44:01.930398",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Attendance Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

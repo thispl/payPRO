@@ -18,7 +18,7 @@ from paypro.paypro.doctype.additional_salary.additional_salary import get_additi
 from paypro.paypro.doctype.payroll_period.payroll_period import get_period_factor, get_payroll_period
 from paypro.paypro.doctype.employee_benefit_application.employee_benefit_application import get_benefit_component_amount
 from paypro.paypro.doctype.employee_benefit_claim.employee_benefit_claim import get_benefit_claim_amount, get_last_payroll_period_benefits
-# from erpnext.loan_management.doctype.loan_repayment.loan_repayment import calculate_amounts, create_repayment_entry
+from paypro.custom import calculate_amounts, create_repayment_entry
 
 class SalarySlip(TransactionBase):
 	def __init__(self, *args, **kwargs):

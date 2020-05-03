@@ -34,6 +34,12 @@ def get_data():
         {
 			"label": _("Attendance"),
 			"items": [
+				{
+					"type": "doctype",
+					"name": "Employee Attendance Tool",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
                 {
 					"type": "doctype",
 					"name": "Attendance",
@@ -49,6 +55,12 @@ def get_data():
 				{
 					"type": "doctype",
 					"name": "Attendance Request",
+					"description": _("paypro"),
+					"onboard": 1,
+				},				
+				{
+					"type": "doctype",
+					"name": "Upload Attendance",
 					"description": _("paypro"),
 					"onboard": 1,
 				},
