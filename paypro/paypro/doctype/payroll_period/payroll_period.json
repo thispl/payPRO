@@ -10,7 +10,10 @@
   "start_date",
   "end_date",
   "payroll_periods_section",
-  "payroll_periods"
+  "periods",
+  "taxable_salary_slabs_section",
+  "taxable_salary_slabs",
+  "standard_tax_exemption_amount"
  ],
  "fields": [
   {
@@ -41,13 +44,29 @@
    "label": "Payroll Periods"
   },
   {
-   "fieldname": "payroll_periods",
+   "fieldname": "periods",
    "fieldtype": "Table",
    "label": "Payroll Periods",
    "options": "Payroll Period Date"
+  },
+  {
+   "fieldname": "taxable_salary_slabs_section",
+   "fieldtype": "Section Break",
+   "label": "Taxable Salary Slabs"
+  },
+  {
+   "fieldname": "taxable_salary_slabs",
+   "fieldtype": "Table",
+   "label": "Taxable Salary Slabs",
+   "options": "Taxable Salary Slab"
+  },
+  {
+   "fieldname": "standard_tax_exemption_amount",
+   "fieldtype": "Currency",
+   "label": "Standard Tax Exemption Amount"
   }
  ],
- "modified": "2020-04-29 19:22:19.361001",
+ "modified": "2020-05-04 22:11:46.437492",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Payroll Period",

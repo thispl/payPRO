@@ -1,0 +1,45 @@
+{
+ "autoname": "Prompt",
+ "creation": "2020-05-04 21:38:14.608335",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "max_amount",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "max_amount",
+   "fieldtype": "Currency",
+   "label": "Max Exemption Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "modified": "2020-05-04 21:38:14.608335",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Tax Exemption Category",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

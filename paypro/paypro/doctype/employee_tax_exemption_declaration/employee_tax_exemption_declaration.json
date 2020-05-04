@@ -1,0 +1,135 @@
+{
+ "autoname": "HR-TAX-DEC-.YYYY.-.#####",
+ "creation": "2020-05-04 21:58:32.389696",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "department",
+  "column_break_4",
+  "payroll_period",
+  "company",
+  "section_break_7",
+  "declarations",
+  "section_break_9",
+  "total_declared_amount",
+  "column_break_11",
+  "total_exemption_amount",
+  "other_incomes_section",
+  "income_from_other_sources",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payroll_period",
+   "fieldtype": "Link",
+   "label": "Payroll Period",
+   "options": "Payroll Period"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "declarations",
+   "fieldtype": "Table",
+   "label": "Declarations",
+   "options": "Employee Tax Exemption Declaration Category"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_declared_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Declared Amount"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_exemption_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Exemption Amount"
+  },
+  {
+   "fieldname": "other_incomes_section",
+   "fieldtype": "Section Break",
+   "label": "Other Incomes"
+  },
+  {
+   "fieldname": "income_from_other_sources",
+   "fieldtype": "Currency",
+   "label": "Income From Other Sources"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Tax Exemption Declaration",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-04 21:59:20.962510",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Tax Exemption Declaration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
