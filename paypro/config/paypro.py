@@ -13,6 +13,12 @@ def get_data():
 				},
 				{
 					"type": "doctype",
+					"name": "Employment Type",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
 					"name": "Branch",
 					"description": _("paypro"),
 					"onboard": 1,
@@ -28,7 +34,25 @@ def get_data():
 					"name": "Designation",
 					"description": _("paypro"),
 					"onboard": 1,
-				},               
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Grade",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Group",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Health Insurance",
+					"description": _("paypro"),
+					"onboard": 1,
+				},     
             ]
         },
         {
@@ -96,6 +120,12 @@ def get_data():
                 {
 					"type": "doctype",
 					"name": "Leave Period",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Leave Policy",
 					"description": _("paypro"),
 					"onboard": 1,
 				},
@@ -173,8 +203,20 @@ def get_data():
             ]
         },
 		{
-			"label": _("Employee Benefit"),
-			"items": [                
+			"label": _("Employee Tax and Benefits"),
+			"items": [
+				{
+					"type": "doctype",
+					"name": "Employee Tax Exemption Declaration",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Tax Exemption Proof Submission",
+					"description": _("paypro"),
+					"onboard": 1,
+				},               
                 {
 					"type": "doctype",
 					"name": "Employee Benefit Application",
@@ -186,7 +228,66 @@ def get_data():
 					"name": "Employee Benefit Claim",
 					"description": _("paypro"),
 					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Tax Exemption Category",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Tax Exemption Sub Category",
+					"description": _("paypro"),
+					"onboard": 1,
 				},               
+            ]
+        },
+		{
+			"label": _("Employee Lifecycle"),
+			"items": [
+                {
+					"type": "doctype",
+					"name": "Employee Onboarding",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+                {
+					"type": "doctype",
+					"name": "Employee Skill Map",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Promotion",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Transfer",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Separation",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Onboarding Template",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Employee Separation Template",
+					"description": _("paypro"),
+					"onboard": 1,
+				},              
             ]
         },
         {
@@ -233,6 +334,23 @@ def get_data():
 					"description": _("paypro"),
 					"onboard": 1,
 				},
+            ]
+        },
+		{
+			"label": _("Expense Claims"),
+			"items": [
+                {
+					"type": "doctype",
+					"name": "Expense Claim",
+					"description": _("paypro"),
+					"onboard": 1,
+				},
+                {
+					"type": "doctype",
+					"name": "Employee Advance",
+					"description": _("paypro"),
+					"onboard": 1,
+				},                
             ]
         },
         {
