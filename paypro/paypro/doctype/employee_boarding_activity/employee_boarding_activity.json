@@ -1,0 +1,73 @@
+{
+ "creation": "2020-05-06 17:16:23.105508",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_name",
+  "user",
+  "role",
+  "column_break_4",
+  "task_weight",
+  "required_for_employee_creation",
+  "section_break_7",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity Name"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "task_weight",
+   "fieldtype": "Float",
+   "label": "Task Weight"
+  },
+  {
+   "default": "0",
+   "fieldname": "required_for_employee_creation",
+   "fieldtype": "Check",
+   "label": "Required for Employee Creation"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-06 22:35:40.824676",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Boarding Activity",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

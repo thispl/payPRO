@@ -42,6 +42,7 @@
    "options": "Employee"
   },
   {
+   "fetch_from": "employee.employee_name",
    "fieldname": "employee_name",
    "fieldtype": "Read Only",
    "in_list_view": 1,
@@ -94,6 +95,7 @@
    "options": "Company"
   },
   {
+   "fetch_from": "employee.department",
    "fieldname": "department",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -121,7 +123,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-22 16:34:04.892913",
+ "modified": "2020-05-06 13:45:20.106069",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Attendance",

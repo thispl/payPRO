@@ -35,13 +35,16 @@
   "department_and_grade_section",
   "department",
   "designation",
-  "column_break_18",
   "reports_to",
+  "column_break_18",
+  "grade",
   "branch",
   "attendance_and_leave_details_section",
+  "leave_policy",
+  "attendance_device_id",
+  "column_break_23",
   "holiday_list",
   "default_shift",
-  "column_break_23",
   "leave_approver",
   "salary_details_section",
   "salary_mode",
@@ -50,6 +53,9 @@
   "column_break_29",
   "pf_number",
   "esi_number",
+  "health_insurance_section",
+  "health_insurance_provider",
+  "health_insurance_no",
   "contact_details_section",
   "cell_number",
   "prefered_contact_email",
@@ -513,8 +519,9 @@
   },
   {
    "fieldname": "reason_for_resignation",
-   "fieldtype": "Data",
-   "label": "Reason for Resignation"
+   "fieldtype": "Select",
+   "label": "Reason for Resignation",
+   "options": "\nBetter Prospects\nHealth Concerns"
   },
   {
    "fieldname": "new_workplace",
@@ -540,9 +547,42 @@
    "fieldname": "old_parent",
    "fieldtype": "Data",
    "label": "Old Parent"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "leave_policy",
+   "fieldtype": "Link",
+   "label": "Leave Policy",
+   "options": "Leave Policy"
+  },
+  {
+   "fieldname": "attendance_device_id",
+   "fieldtype": "Data",
+   "label": "Attendance Device ID (Biometric/RF tag ID)"
+  },
+  {
+   "fieldname": "health_insurance_section",
+   "fieldtype": "Section Break",
+   "label": "Health Insurance"
+  },
+  {
+   "fieldname": "health_insurance_provider",
+   "fieldtype": "Link",
+   "label": "Health Insurance Provider",
+   "options": "Employee Health Insurance"
+  },
+  {
+   "fieldname": "health_insurance_no",
+   "fieldtype": "Data",
+   "label": "Health Insurance No"
   }
  ],
- "modified": "2020-05-02 11:04:31.051897",
+ "modified": "2020-05-06 22:48:00.643265",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee",

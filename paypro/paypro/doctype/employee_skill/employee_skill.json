@@ -1,0 +1,43 @@
+{
+ "creation": "2020-05-06 17:27:25.768003",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "skill",
+  "proficiency",
+  "evaluation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "skill",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Skill",
+   "options": "Skill"
+  },
+  {
+   "fieldname": "proficiency",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Proficiency"
+  },
+  {
+   "fieldname": "evaluation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Evaluation Date"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-06 17:27:25.768003",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Skill",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,141 @@
+{
+ "autoname": "HR-EMP-SEP-.YYYY.-.#####",
+ "creation": "2020-05-06 17:43:26.670592",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "resignation_letter_date",
+  "boarding_status",
+  "notify_users_by_email",
+  "column_break_6",
+  "employee_separation_template",
+  "company",
+  "department",
+  "designation",
+  "employee_grade",
+  "section_break_12",
+  "activities",
+  "section_break_14",
+  "exit_interview",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "resignation_letter_date",
+   "fieldtype": "Date",
+   "label": "Resignation Letter Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "notify_users_by_email",
+   "fieldtype": "Check",
+   "label": "Notify users by email"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_separation_template",
+   "fieldtype": "Link",
+   "label": "Employee Separation Template",
+   "options": "Employee Separation Template"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "employee_grade",
+   "fieldtype": "Link",
+   "label": "Employee Grade",
+   "options": "Employee Grade"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "activities",
+   "fieldtype": "Table",
+   "label": "Activities",
+   "options": "Employee Boarding Activity"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "exit_interview",
+   "fieldtype": "Text Editor",
+   "label": "Exit Interview Summary"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Separation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "boarding_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending\nIn Process\nCompleted"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-06 22:38:29.737698",
+ "modified_by": "Administrator",
+ "module": "Paypro",
+ "name": "Employee Separation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
