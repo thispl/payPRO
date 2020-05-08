@@ -89,12 +89,14 @@
    "label": "Amount based on formula"
   },
   {
+   "depends_on": "eval:doc.amount_based_on_formula!==0 && doc.parenttype==='Salary Structure'",
    "fieldname": "formula",
    "fieldtype": "Code",
    "in_list_view": 1,
    "label": "Formula"
   },
   {
+   "depends_on": "eval:doc.amount_based_on_formula!==1 || doc.parenttype==='Salary Slip'",
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -108,6 +110,7 @@
    "label": "Do not include in total"
   },
   {
+   "depends_on": "eval:doc.parenttype=='Salary Structure'",
    "fieldname": "default_amount",
    "fieldtype": "Currency",
    "label": "Default Amount",
@@ -119,11 +122,13 @@
    "label": "Additional Amount"
   },
   {
+   "depends_on": "eval:doc.parenttype=='Salary Slip' && doc.parentfield=='deductions' && doc.variable_based_on_taxable_salary == 1",
    "fieldname": "tax_on_flexible_benefit",
    "fieldtype": "Currency",
    "label": "Tax on flexible benefit"
   },
   {
+   "depends_on": "eval:doc.parenttype=='Salary Slip' && doc.parentfield=='deductions' && doc.variable_based_on_taxable_salary == 1",
    "fieldname": "tax_on_additional_salary",
    "fieldtype": "Currency",
    "label": "Tax on additional salary"
@@ -147,7 +152,7 @@
   }
  ],
  "istable": 1,
- "modified": "2020-04-22 00:27:46.210616",
+ "modified": "2020-05-08 20:59:24.874579",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Salary Detail",

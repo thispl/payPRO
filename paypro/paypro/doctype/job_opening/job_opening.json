@@ -22,6 +22,8 @@
   {
    "fieldname": "job_title",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Job Title"
   },
   {
@@ -43,12 +45,16 @@
   {
    "fieldname": "designation",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Designation",
    "options": "Designation"
   },
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -61,6 +67,7 @@
   {
    "fieldname": "planned_vacancies",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Planned number of Positions"
   },
   {
@@ -85,7 +92,7 @@
    "label": "Description"
   }
  ],
- "modified": "2020-05-01 21:44:48.788145",
+ "modified": "2020-05-08 10:49:23.931334",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Job Opening",

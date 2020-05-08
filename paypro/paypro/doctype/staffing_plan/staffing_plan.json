@@ -26,6 +26,8 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -36,11 +38,13 @@
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "From Date"
   },
   {
    "fieldname": "to_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "To Date"
   },
   {
@@ -73,7 +77,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-05-01 23:25:17.541475",
+ "modified": "2020-05-08 10:56:41.149103",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Staffing Plan",

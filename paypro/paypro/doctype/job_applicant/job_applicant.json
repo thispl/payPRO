@@ -9,7 +9,7 @@
   "email_id",
   "status",
   "column_break_4",
-  "job_opening",
+  "job_title",
   "source",
   "source_name",
   "section_break_8",
@@ -20,29 +20,27 @@
   {
    "fieldname": "applicant_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Applicant Name"
   },
   {
    "fieldname": "email_id",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Email Address",
    "options": "Email"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Open\nReplied\nRejected\nHold\nAccepted"
   },
   {
    "fieldname": "column_break_4",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "job_opening",
-   "fieldtype": "Link",
-   "label": "Job Opening",
-   "options": "Job Opening"
   },
   {
    "fieldname": "source",
@@ -69,9 +67,17 @@
    "fieldname": "resume_attachment",
    "fieldtype": "Attach",
    "label": "Resume Attachment"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Opening",
+   "options": "Job Opening"
   }
  ],
- "modified": "2020-05-01 21:47:39.552496",
+ "modified": "2020-05-08 10:50:52.537254",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Job Applicant",
