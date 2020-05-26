@@ -31,6 +31,7 @@
   "total_working_hours",
   "hour_rate",
   "section_break_27",
+  "salary_mode",
   "bank_name",
   "bank_account_no",
   "section_break_30",
@@ -348,10 +349,16 @@
    "fieldtype": "Table",
    "label": "Employee Loan",
    "options": "Salary Slip Loan"
+  },
+  {
+   "fetch_from": "employee.salary_mode",
+   "fieldname": "salary_mode",
+   "fieldtype": "Data",
+   "label": "Salary Mode"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-05-05 14:43:32.565974",
+ "modified": "2020-05-26 10:17:00.090145",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Salary Slip",

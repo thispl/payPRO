@@ -31,11 +31,13 @@
    "options": "Employee"
   },
   {
+   "fetch_from": "employee.employee_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
    "label": "Employee Name"
   },
   {
+   "fetch_from": "employee.department",
    "fieldname": "department",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -50,6 +52,8 @@
   {
    "fieldname": "payroll_period",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Payroll Period",
    "options": "Payroll Period"
   },
@@ -110,7 +114,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-05-04 21:59:20.962510",
+ "modified": "2020-05-25 23:45:17.794618",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee Tax Exemption Declaration",
@@ -131,5 +135,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "employee",
  "track_changes": 1
 }

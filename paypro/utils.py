@@ -406,17 +406,17 @@ def get_holidays_for_employee(employee, start_date, end_date):
 
 	return holidays
 
-# @paypro.allow_regional
-# def calculate_annual_eligible_hra_exemption(doc):
-# 	# Don't delete this method, used for localization
-# 	# Indian HRA Exemption Calculation
-# 	return {}
+@paypro.allow_regional
+def calculate_annual_eligible_hra_exemption(doc):
+	# Don't delete this method, used for localization
+	# Indian HRA Exemption Calculation
+	return {}
 
-# @paypro.allow_regional
-# def calculate_hra_exemption_for_period(doc):
-# 	# Don't delete this method, used for localization
-# 	# Indian HRA Exemption Calculation
-# 	return {}
+@paypro.allow_regional
+def calculate_hra_exemption_for_period(doc):
+	# Don't delete this method, used for localization
+	# Indian HRA Exemption Calculation
+	return {}
 
 def get_previous_claimed_amount(employee, payroll_period, non_pro_rata=False, component=False):
 	total_claimed_amount = 0

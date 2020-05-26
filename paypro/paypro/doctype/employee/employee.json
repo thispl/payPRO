@@ -75,6 +75,7 @@
   "column_break_48",
   "marital_status",
   "blood_group",
+  "age",
   "educational_qualification_section",
   "education",
   "previous_work_experience_section",
@@ -111,12 +112,14 @@
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name"
+   "label": "First Name",
+   "reqd": 1
   },
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name"
+   "label": "Last Name",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_6",
@@ -143,12 +146,14 @@
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "\nMale\nFemale\nOther"
+   "options": "\nMale\nFemale\nOther",
+   "reqd": 1
   },
   {
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
-   "label": "Date of Birth"
+   "label": "Date of Birth",
+   "reqd": 1
   },
   {
    "fieldname": "date_of_joining",
@@ -177,7 +182,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Department",
-   "options": "Department"
+   "options": "Department",
+   "reqd": 1
   },
   {
    "fieldname": "designation",
@@ -185,7 +191,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Designation",
-   "options": "Designation"
+   "options": "Designation",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_18",
@@ -214,7 +221,8 @@
    "fieldname": "holiday_list",
    "fieldtype": "Link",
    "label": "Holiday List",
-   "options": "Holiday List"
+   "options": "Holiday List",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_23",
@@ -580,9 +588,15 @@
    "fieldname": "health_insurance_no",
    "fieldtype": "Data",
    "label": "Health Insurance No"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
   }
  ],
- "modified": "2020-05-06 22:48:00.643265",
+ "modified": "2020-05-18 07:55:56.288702",
  "modified_by": "Administrator",
  "module": "Paypro",
  "name": "Employee",
